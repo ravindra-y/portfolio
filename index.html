@@ -1,0 +1,2595 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Ravindra | Professional Full Stack Developer specializing in high-performance NeoBrutalist web experiences. Let's build the future with raw aesthetics.">
+    <meta name="keywords"
+        content="Ravindra, Full Stack Developer, NeoBrutalist, Portfolio, Web Development, UI/UX, Javascript, React">
+    <meta name="author" content="Ravindra">
+    <link rel="canonical" href="https://arham-portfolio-v2.vercel.app/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arham-portfolio-v2.vercel.app/">
+    <meta property="og:title" content="RAVINDRA | Full Stack Developer">
+    <meta property="og:description"
+        content="Professional Full Stack Developer specializing in high-performance NeoBrutalist web experiences.">
+    <meta property="og:image" content="https://arham-portfolio-v2.vercel.app/assets/images/phisgaurd.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://arham-portfolio-v2.vercel.app/">
+    <meta property="twitter:title" content="RAVINDRA | Full Stack Developer">
+    <meta property="twitter:description"
+        content="Professional Full Stack Developer specializing in high-performance NeoBrutalist web experiences.">
+    <meta property="twitter:image" content="https://arham-portfolio-v2.vercel.app/assets/images/phisgaurd.png">
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TLNG322R');</script>
+    <!-- End Google Tag Manager -->
+    <title>RAVINDRA | Full Stack Developer</title>
+
+    <!-- Theme & Performance -->
+    <meta name="theme-color" content="#121212">
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&family=Space+Grotesk:wght@800&display=swap"
+        as="style">
+
+    <!-- JSON-LD Structured Data for Search Engines -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Ravindra",
+      "url": "https://arham-portfolio-v2.vercel.app/",
+      "jobTitle": "Full Stack Developer",
+    "image": "https://arham-portfolio-v2.vercel.app/assets/icons/og-icon.png",
+      "knowsAbout": ["React", "Python", "Java", "Node.js", "Django", "Three.js", "UI/UX Design", "NeoBrutalist Design"],
+      "sameAs": [
+                "https://github.com/ravindra-y",
+                "https://leetcode.com/u/ravindra-y/"
+      ],
+      "description": "Professional Full Stack Developer specializing in high-performance NeoBrutalist web experiences. Let's build the future with raw aesthetics."
+    }
+    </script>
+
+    <link rel="stylesheet" href="assets/css/tailwind.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/title-icon.png">
+    <link rel="shortcut icon" type="image/png" href="assets/icons/title-icon.png">
+    <link rel="apple-touch-icon" href="assets/icons/title-icon.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&family=Space+Grotesk:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* Base Styles */
+        body {
+            cursor: none;
+            /* We use a custom cursor */
+            background-color: #FFFDF5;
+            background-image:
+                radial-gradient(#000 1px, transparent 1px),
+                linear-gradient(to right, #e5e5e5 1px, transparent 1px),
+                linear-gradient(to bottom, #e5e5e5 1px, transparent 1px);
+            background-size: 40px 40px, 100px 100px, 100px 100px;
+        }
+
+        /* Custom Cursor */
+        #cursor {
+            pointer-events: none;
+            position: fixed;
+            z-index: 9999;
+            mix-blend-mode: difference;
+            transition: width 0.2s, height 0.2s, background-color 0.2s, transform 0.1s;
+        }
+
+        /* Animations */
+        .marquee-container {
+            overflow: hidden;
+        }
+
+        .marquee-content {
+            display: flex;
+            animation: scroll 40s linear infinite;
+            width: max-content;
+        }
+
+        .marquee-container:hover .marquee-content {
+            animation-play-state: paused;
+        }
+
+        .marquee-content-reverse {
+            display: inline-block;
+            animation: scroll-reverse 20s linear infinite;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        @keyframes scroll-reverse {
+            0% {
+                transform: translateX(-50%);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes infinite-marquee {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .animate-marquee {
+            display: flex;
+            width: max-content;
+            animation: infinite-marquee 15s linear infinite;
+        }
+
+        .animate-marquee:hover {
+            animation-play-state: paused;
+        }
+
+        .badge-loop-track {
+            display: flex;
+            gap: 0;
+            width: max-content;
+            align-items: center;
+            will-change: transform;
+        }
+
+        .badge-loop-group {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+            flex-shrink: 0;
+            padding-right: 0.5rem;
+        }
+
+        /* Hide scrollbar for a cleaner marquee look */
+        .marquee-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        .marquee-container {
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+            /* Firefox */
+        }
+
+        /* Reveal Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Glitch Effect on Hover */
+        .glitch-hover:hover {
+            animation: glitch-anim 0.3s cubic-bezier(.25, .46, .45, .94) both infinite;
+            color: #FF2A2A;
+        }
+
+        @keyframes glitch-anim {
+            0% {
+                transform: translate(0)
+            }
+
+            20% {
+                transform: translate(-2px, 2px)
+            }
+
+            40% {
+                transform: translate(-2px, -2px)
+            }
+
+            60% {
+                transform: translate(2px, 2px)
+            }
+
+            80% {
+                transform: translate(2px, -2px)
+            }
+
+            100% {
+                transform: translate(0)
+            }
+        }
+
+        /* Contact form success animation */
+        #contact-form {
+            position: relative;
+            overflow: hidden;
+        }
+
+        #contact-form .contact-form-fields {
+            transition: opacity 0.35s ease, transform 0.35s ease;
+        }
+
+        #contact-form .contact-form-success {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            background: #fff;
+            opacity: 0;
+            pointer-events: none;
+            transform: scale(0.98);
+            transition: opacity 0.35s ease, transform 0.35s ease;
+        }
+
+        #contact-form.contact-form--success {
+            background: #fff;
+        }
+
+        #contact-form.contact-form--success .contact-form-fields {
+            opacity: 0;
+            transform: translateY(-8px) scale(0.98);
+            pointer-events: none;
+        }
+
+        #contact-form.contact-form--success .contact-form-success {
+            opacity: 1;
+            pointer-events: auto;
+            transform: scale(1);
+        }
+
+        #contact-form.contact-form--success #contact-form-status {
+            display: none;
+        }
+
+        #contact-form.contact-form--success .transmission-success-card {
+            animation: transmission-pop 0.45s ease;
+        }
+
+        .transmission-success-card {
+            position: relative;
+            width: 100%;
+            max-width: 320px;
+            background: transparent;
+            border: none;
+            box-shadow: none;
+            padding: 0;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .transmission-success-title {
+            margin-top: 0.75rem;
+        }
+
+        .transmission-success-text {
+            margin-top: 0.5rem;
+        }
+
+        .transmission-icon {
+            position: relative;
+            width: 56px;
+            height: 56px;
+            margin: 0 auto 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 999px;
+            background: #33FF57;
+            border: none;
+            box-shadow: none;
+        }
+
+        .transmission-icon i {
+            font-size: 2rem;
+            color: #fff;
+            position: relative;
+            z-index: 2;
+        }
+
+        .transmission-ring {
+            display: none;
+        }
+
+        .transmission-scanline {
+            display: none;
+        }
+
+        @keyframes transmission-ring {
+            0% {
+                transform: scale(0.6);
+                opacity: 0.8;
+            }
+
+            100% {
+                transform: scale(1.25);
+                opacity: 0;
+            }
+        }
+
+        @keyframes transmission-pop {
+            0% {
+                transform: scale(0.94);
+                opacity: 0.4;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes transmission-scan {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(110px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body class="text-neo-black font-display antialiased selection:bg-neo-black selection:text-neo-yellow">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TLNG322R" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div id="cursor" class="w-6 h-6 bg-white rounded-full border-2 border-black hidden lg:block"></div>
+
+    <div class="fixed top-0 left-0 h-2 bg-neo-green z-[60] border-b-2 border-black" id="progressBar" style="width: 0%">
+    </div>
+
+    <nav class="fixed top-0 w-full z-50 px-4 py-4 pointer-events-none">
+        <div class="max-w-7xl mx-auto flex justify-between items-center pointer-events-auto">
+            <a href="#"
+                class="bg-neo-white border-2 border-black px-4 py-1 text-2xl font-black shadow-hard hover:bg-neo-yellow transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none cursor-hover">
+                RAVINDRA.exe
+            </a>
+
+            <div class="hidden md:flex gap-4 bg-white border-2 border-black p-2 shadow-hard">
+                <a href="#about"
+                    class="px-3 py-1 font-mono font-bold text-sm hover:bg-black hover:text-white transition-colors cursor-hover">/ABOUT</a>
+                <a href="#skills"
+                    class="px-3 py-1 font-mono font-bold text-sm hover:bg-black hover:text-white transition-colors cursor-hover">/SKILLS</a>
+                <a href="#experience"
+                    class="px-3 py-1 font-mono font-bold text-sm hover:bg-black hover:text-white transition-colors cursor-hover">/LOGS</a>
+                <a href="#projects"
+                    class="px-3 py-1 font-mono font-bold text-sm hover:bg-black hover:text-white transition-colors cursor-hover">/WORK</a>
+                <a href="#contact"
+                    class="px-3 py-1 font-mono font-bold text-sm bg-neo-yellow border border-black hover:bg-neo-pink transition-colors cursor-hover">HIRE
+                    ME</a>
+            </div>
+        </div>
+    </nav>
+
+    <section
+        class="min-h-screen flex flex-col justify-center items-center px-4 pt-20 relative overflow-hidden border-b-4 border-black">
+        <div
+            class="absolute top-1/3 left-[10%] w-16 h-16 bg-neo-blue border-4 border-black shadow-hard animate-bounce hidden lg:block rotate-12">
+        </div>
+        <div
+            class="absolute bottom-1/3 right-[10%] w-24 h-24 bg-neo-pink rounded-full border-4 border-black shadow-hard hidden lg:block animate-pulse">
+        </div>
+        <div class="absolute top-20 right-20 text-9xl opacity-5 font-black select-none pointer-events-none">CODE</div>
+
+        <div class="relative z-10 text-center max-w-5xl">
+            <div
+                class="inline-block bg-neo-white border-2 border-black px-4 py-1 mb-6 shadow-hard rotate-[-2deg] reveal">
+                <span class="font-mono font-bold text-neo-green bg-black px-2 mr-2">●</span>
+                <span class="font-mono font-bold">SYSTEM STATUS: ONLINE</span>
+            </div>
+
+            <h1
+                class="text-[13vw] md:text-[10vw] leading-[0.8] font-black uppercase tracking-tighter mb-6 reveal mix-blend-darken">
+                FULL STACK<br>
+                <span class="text-white text-stroke-black" style="-webkit-text-stroke: 3px black;">DEVELOPER</span>
+            </h1>
+
+            <p
+                class="font-mono text-lg md:text-2xl max-w-2xl mx-auto mb-10 bg-neo-yellow border-2 border-black p-4 shadow-hard reveal rotate-1">
+                I build digital products that refuse to be boring. <br>
+                <b>React • Python • Tailwindcss • Node</b>
+            </p>
+
+            <div class="flex flex-col md:flex-row justify-center gap-6 reveal">
+                <a href="#projects"
+                    class="bg-black text-white border-2 border-black px-10 py-5 text-xl font-bold shadow-hard hover:bg-neo-green hover:text-black hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all cursor-hover">
+                    VIEW DATABASE
+                </a>
+                <a href="assets/resume/ravindra-resume.pdf" download
+                    class="bg-neo-white text-black border-2 border-black px-10 py-5 text-xl font-bold shadow-hard hover:bg-neo-pink hover:text-black hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all cursor-hover flex items-center justify-center gap-2">
+                    <i class="ri-download-line"></i> DOWNLOAD CV
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div class="border-b-4 border-black bg-neo-blue py-3 relative z-20">
+        <div class="marquee-container font-mono font-bold text-2xl text-white">
+            <div class="marquee-content">
+                /// OPEN FOR WORK /// FULL STACK DEVELOPMENT /// UI/UX DESIGN /// WEB3 READY /// ACCESSIBLE /// FAST ///
+                SECURE /// OPEN FOR WORK /// FULL STACK DEVELOPMENT ///
+            </div>
+        </div>
+    </div>
+
+    <section id="about" class="py-24 px-4 max-w-7xl mx-auto border-x-4 border-black bg-white my-12 shadow-hard-lg">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+            <div class="md:col-span-4 reveal">
+                <div class="aspect-square bg-gray-200 border-4 border-black relative shadow-hard overflow-hidden group">
+                    <img src="assets/images/pic.png" alt="Ravindra"
+                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
+                    <span
+                        class="absolute top-2 left-2 bg-neo-red text-white px-2 font-mono text-xs border border-black z-10">AVATAR.PNG</span>
+                </div>
+            </div>
+            <div class="md:col-span-8 flex flex-col justify-center reveal">
+                <h2 class="text-6xl font-black uppercase mb-6">Who am I?</h2>
+                <p class="font-mono text-xl leading-relaxed mb-6">
+                    I am Ravindra. A creative developer who believes the web has become too sanitized. I bring <span
+                        class="bg-neo-yellow px-1 border border-black">personality</span> back to code.
+                </p>
+                <p class="font-mono text-lg mb-8 text-gray-600 border-l-4 border-neo-purple pl-4">
+                    > Specialized in Designing and Web Development.<br>
+                    > Obsessed with Perfection and AI.<br>
+                    > 3+ years of shipping code that works.
+                </p>
+
+                <div class="flex gap-4">
+                    <div class="bg-neo-black text-white px-4 py-2 font-mono text-sm border-2 border-transparent">
+                        📍 LOCATION: WORLDWIDE
+                    </div>
+                    <div class="bg-neo-green text-black px-4 py-2 font-mono text-sm border-2 border-black">
+                        🟢 STATUS: AVAILABLE
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-20 bg-neo-black text-neo-white border-y-4 border-black relative overflow-hidden">
+        <div class="absolute inset-0 opacity-20"
+            style="background-image: linear-gradient(#333 1px, transparent 1px), linear-gradient(90deg, #333 1px, transparent 1px); background-size: 40px 40px;">
+        </div>
+
+        <div class="max-w-[1400px] mx-auto px-4 relative z-10">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 border-b-4 border-white pb-4">
+                <h2 class="text-6xl md:text-8xl font-black uppercase text-white tracking-tighter">
+                    TECH<span class="text-neo-green">_STACK</span>
+                </h2>
+                <div class="flex items-center gap-2 mb-2 md:mb-4">
+                    <div class="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
+                    <p class="font-mono text-neo-green text-sm font-bold">/// SYSTEM_OPTIMIZED</p>
+                </div>
+            </div>
+
+            <div class="flex flex-wrap justify-center md:justify-start">
+
+                <div
+                    class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-white transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2">
+                    <div class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50">>_ LIBRARY
+                    </div>
+                    <div class="text-white group-hover:text-black font-black font-display text-xl uppercase">REACT</div>
+                </div>
+
+                <div
+                    class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-yellow transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2">
+                    <div class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50">>_ FRAMEWORK
+                    </div>
+                    <div class="text-white group-hover:text-black font-black font-display text-xl uppercase">NEXT.JS
+                    </div>
+                </div>
+
+                <div
+                    class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-blue transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2">
+                    <div class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50">>_ LANGUAGE
+                    </div>
+                    <div class="text-white group-hover:text-black font-black font-display text-xl uppercase">Python
+                    </div>
+                </div>
+
+                <div
+                    class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-green transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2">
+                    <div class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50">>_ BACKEND
+                    </div>
+                    <div class="text-white group-hover:text-black font-black font-display text-xl uppercase">NODE.JS
+                    </div>
+                </div>
+
+                <div
+                    class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-pink transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2">
+                    <div class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50">>_ STYLING
+                    </div>
+                    <div class="text-white group-hover:text-black font-black font-display text-xl uppercase">TAILWIND
+                    </div>
+                </div>
+
+                <div
+                    class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-purple transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2">
+                    <div class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50">>_ DATA</div>
+                    <div class="text-white group-hover:text-black font-black font-display text-xl uppercase">MySQL</div>
+                </div>
+
+                <div
+                    class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-orange transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2">
+                    <div class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50">>_ CORE</div>
+                    <div class="text-white group-hover:text-black font-black font-display text-xl uppercase">HTML5</div>
+                </div>
+
+                <div
+                    class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-white transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2">
+                    <div class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50">>_ VERSION
+                    </div>
+                    <div class="text-white group-hover:text-black font-black font-display text-xl uppercase">GIT</div>
+                </div>
+
+                <div
+                    class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-white transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2">
+                    <div class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50">>_ QUERY</div>
+                    <div class="text-white group-hover:text-black font-black font-display text-xl uppercase">GRAPHQL
+                    </div>
+                </div>
+
+                <div
+                    class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-blue transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2">
+                    <div class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50">>_ OPS</div>
+                    <div class="text-white group-hover:text-black font-black font-display text-xl uppercase">GitHub
+                    </div>
+                </div>
+
+                <div
+                    class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-orange transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2">
+                    <div class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50">>_ LANGUAGE
+                    </div>
+                    <div class="text-white group-hover:text-black font-black font-display text-xl uppercase">JAVA</div>
+                </div>
+
+                <div
+                    class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-yellow transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2">
+                    <div class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50">>_ FRAMEWORK
+                    </div>
+                    <div class="text-white group-hover:text-black font-black font-display text-xl uppercase">Django
+                    </div>
+                </div>
+
+                <div
+                    class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-pink transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2">
+                    <div class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50">>_ LANGUAGE
+                    </div>
+                    <div class="text-white group-hover:text-black font-black font-display text-xl uppercase">PHP</div>
+                </div>
+
+                <div
+                    class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-white transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2">
+                    <div class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50">>_ FRAMEWORK
+                    </div>
+                    <div class="text-white group-hover:text-black font-black font-display text-xl uppercase">LARAVEL
+                    </div>
+                </div>
+
+                <div
+                    class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-green transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2">
+                    <div class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50">>_ 3D</div>
+                    <div class="text-white group-hover:text-black font-black font-display text-xl uppercase">THREE.JS
+                    </div>
+                </div>
+
+                <div
+                    class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-purple transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2">
+                    <div class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50">>_ LANGUAGE
+                    </div>
+                    <div class="text-white group-hover:text-black font-black font-display text-xl uppercase">C++</div>
+                </div>
+            </div>
+
+            <div class="border-t-4 border-white mt-8 pt-4 flex justify-between font-mono text-xs text-gray-500">
+                <span>TOTAL_NODES: 16</span>
+                <span>MEMORY_USAGE: 128MB</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-24 px-4 max-w-7xl mx-auto">
+        <h2 class="text-5xl md:text-8xl font-black uppercase mb-12 tracking-tighter text-center">
+            Experience<span class="text-neo-red">_Log</span>
+        </h2>
+
+        <div class="relative border-l-4 border-black ml-4 md:ml-10 space-y-12">
+            <div class="reveal relative pl-8 md:pl-16">
+                <div class="absolute -left-[14px] top-2 w-6 h-6 bg-neo-yellow border-4 border-black"></div>
+                <div class="bg-white border-4 border-black p-6 shadow-hard hover:shadow-hard-xl transition-all">
+                    <div
+                        class="flex flex-col md:flex-row justify-between items-start md:items-center border-b-2 border-dashed border-gray-300 pb-4 mb-4">
+                        <h3 class="text-3xl font-black uppercase">Freelance Full-Stack Developer</h3>
+                        <span class="font-mono font-bold bg-neo-black text-white px-2 py-1">May 2026 - PRESENT</span>
+                    </div>
+                    <p class="font-mono text-xl mb-2 text-neo-yellow font-bold">@ SELF_EMPLOYED</p>
+                    <ul class="list-disc list-inside font-mono text-gray-700 space-y-1">
+                        <li>Building responsive and interactive web applications using HTML5, CSS3, and JavaScript</li>
+                        <li>Developing modern web applications using React, Next.js, and Node.js</li>
+                        <li>Creating custom web solutions tailored to client requirements</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="reveal relative pl-8 md:pl-16">
+                <div class="absolute -left-[14px] top-2 w-6 h-6 bg-neo-purple border-4 border-black"></div>
+                <div class="bg-white border-4 border-black p-6 shadow-hard hover:shadow-hard-xl transition-all">
+                    <div
+                        class="flex flex-col md:flex-row justify-between items-start md:items-center border-b-2 border-dashed border-gray-300 pb-4 mb-4">
+                        <h3 class="text-3xl font-black uppercase">AI License Risk Analyzer (CLI Tool)</h3>
+                        <span class="font-mono font-bold bg-neo-black text-white px-2 py-1">Apr 2026</span>
+                    </div>
+                    <p class="font-mono text-xl mb-2 text-neo-purple font-bold">@ GitHub Dev Days | MLH x Google Gemini
+                    </p>
+                    <ul class="list-disc list-inside font-mono text-gray-700 space-y-1">
+                        <li>Developed a CLI tool to automate dependency risk analysis across license, security, and
+                            supply-chain dimensions</li>
+                        <li>Reduced manual compliance effort by classifying open-source licenses into actionable risk
+                            categories</li>
+                        <li>Integrated AI (Google Gemini) to generate concise risk explanations and remediation steps
+                        </li>
+                        <li>Built a trust scoring system (0-100) to quantify project safety and highlight critical
+                            dependencies</li>
+                        <li>Enhanced developer experience with structured reports, JSON export, and terminal UI</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="reveal relative pl-8 md:pl-16">
+                <div class="absolute -left-[14px] top-2 w-6 h-6 bg-neo-red border-4 border-black"></div>
+                <div class="bg-white border-4 border-black p-6 shadow-hard hover:shadow-hard-xl transition-all">
+                    <div
+                        class="flex flex-col md:flex-row justify-between items-start md:items-center border-b-2 border-dashed border-gray-300 pb-4 mb-4">
+                        <h3 class="text-3xl font-black uppercase">HACKATHON FINALIST (TOP 20 TEAMS)</h3>
+                        <span class="font-mono font-bold bg-neo-black text-white px-2 py-1">Mar 2026</span>
+                    </div>
+                    <p class="font-mono text-xl mb-2 text-neo-red font-bold">@ TechSprint 2026 | GDG On Campus, SSTC</p>
+                    <ul class="list-disc list-inside font-mono text-gray-700 space-y-1">
+                        <li>Selected among Top 20 teams for demonstrating technical excellence at TechSprint 2026
+                            Hackathon.</li>
+                        <li>Built an innovative solution under tight deadlines, focusing on problem-solving and
+                            collaboration.</li>
+                        <li>Participated in a Google-supported hackathon (GDG On Campus + Hack2Skill).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="reveal relative pl-8 md:pl-16">
+                <div class="absolute -left-[14px] top-2 w-6 h-6 bg-neo-green border-4 border-black"></div>
+                <div class="bg-white border-4 border-black p-6 shadow-hard hover:shadow-hard-xl transition-all">
+                    <div
+                        class="flex flex-col md:flex-row justify-between items-start md:items-center border-b-2 border-dashed border-gray-300 pb-4 mb-4">
+                        <h3 class="text-3xl font-black uppercase">WEB DEVELOPMENT HACKATHON</h3>
+                        <span class="font-mono font-bold bg-neo-black text-white px-2 py-1">Dec 2025</span>
+                    </div>
+                    <p class="font-mono text-xl mb-2 text-neo-green font-bold">@ KK Modi University (SITEFORGE 1.0)</p>
+                    <ul class="list-disc list-inside font-mono text-gray-700 space-y-1">
+                        <li>Secured 2nd position in SITEFORGE 1.0, a pan-India web development contest.</li>
+                        <li>Built CropShare, a platform connecting farmers and NGOs to facilitate crop selling and
+                            reduce waste.</li>
+                        <li>Designed an intuitive web interface for seamless communication and transactions.</li>
+                        <li>Collaborated in Team VisionFlow to develop and present the solution.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="reveal relative pl-8 md:pl-16">
+                <div class="absolute -left-[14px] top-2 w-6 h-6 bg-neo-pink border-4 border-black"></div>
+                <div class="bg-white border-4 border-black p-6 shadow-hard hover:shadow-hard-xl transition-all">
+                    <div
+                        class="flex flex-col md:flex-row justify-between items-start md:items-center border-b-2 border-dashed border-gray-300 pb-4 mb-4">
+                        <h3 class="text-3xl font-black uppercase">FRONTEND DEVELOPER (Hackathon)</h3>
+                        <span class="font-mono font-bold bg-neo-black text-white px-2 py-1">Nov 2025</span>
+                    </div>
+                    <p class="font-mono text-xl mb-2 text-neo-pink font-bold">@ AAYAM | The Astro Club, BIT Durg</p>
+                    <ul class="list-disc list-inside font-mono text-gray-700 space-y-1">
+                        <li>Secured 2nd place (Runner-Up) in Hack The Cosmos under the Low Code Track (Frontend).</li>
+                        <li>Developed a Night Sky Monitoring Website to track stars, constellations, and sky events.
+                        </li>
+                        <li>Developed an innovative frontend solution as part of Team VisionFlow.</li>
+                        <li>Focused on responsive UI design, performance optimization, and user experience.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="reveal relative pl-8 md:pl-16">
+                <div class="absolute -left-[14px] top-2 w-6 h-6 bg-neo-blue border-4 border-black"></div>
+                <div class="bg-white border-4 border-black p-6 shadow-hard hover:shadow-hard-xl transition-all">
+                    <div
+                        class="flex flex-col md:flex-row justify-between items-start md:items-center border-b-2 border-dashed border-gray-300 pb-4 mb-4">
+                        <h3 class="text-3xl font-black uppercase">IDEA PITCHING / TECH EVENT PARTICIPANT</h3>
+                        <span class="font-mono font-bold bg-neo-black text-white px-2 py-1">Sep 2025</span>
+                    </div>
+                    <p class="font-mono text-xl mb-2 text-neo-blue font-bold">@ Shri Shankaracharya Technical Campus</p>
+                    <ul class="list-disc list-inside font-mono text-gray-700 space-y-1">
+                        <li>Secured 3rd position in “Utthan” (Idea Pitching / Coding Competition).</li>
+                        <li>Pitched a Quantum-Secure Messaging Client focused on enhancing communication security using
+                            advanced cryptographic concepts.</li>
+                        <li>Collaborated as part of Team InnovateX to design and present the solution.</li>
+                        <li>Awarded Certificate of Excellence for performance and innovation.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CODING STATS SECTION -->
+    <section id="coding-stats" class="py-12 bg-neo-black text-white border-y-4 border-black relative overflow-hidden">
+        <div class="absolute inset-0 opacity-20"
+            style="background-image: linear-gradient(#333 1px, transparent 1px), linear-gradient(90deg, #333 1px, transparent 1px); background-size: 40px 40px;">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <!-- Compact Header -->
+            <div class="flex justify-between items-center mb-6 border-b-2 border-white pb-3">
+                <h2 class="text-4xl md:text-5xl font-black uppercase text-white tracking-tight">
+                    CODING<span class="text-neo-green">_STATS</span>
+                </h2>
+                <div class="flex items-center gap-2">
+                    <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                    <p class="font-mono text-neo-green text-xs font-bold">LIVE</p>
+                </div>
+            </div>
+
+            <!-- Two Column Layout: GitHub | LeetCode -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:auto-rows-fr">
+                <!-- GitHub Column -->
+                <div class="reveal flex flex-col h-full">
+                    <div class="flex items-center gap-2 mb-4 border-b border-white/20 pb-2">
+                        <div class="w-8 h-8 bg-neo-green border-2 border-white flex items-center justify-center">
+                            <i class="ri-github-fill text-lg text-black"></i>
+                        </div>
+                        <h3 class="text-2xl font-black uppercase text-white">GITHUB</h3>
+                    </div>
+
+                    <!-- GitHub Block -->
+                    <div
+                        class="border-4 border-white/20 p-6 bg-black flex-1 flex flex-col shadow-[8px_8px_0_rgba(0,0,0,1)] relative group">
+                        <!-- Profile Header -->
+                        <div class="flex items-center justify-between mb-8 pb-4 border-b border-white/10">
+                            <div class="flex items-center gap-3">
+                                <i class="ri-github-fill text-3xl text-neo-green"></i>
+                                <div>
+                                    <h4 class="text-xl font-black text-white leading-tight">ravindra-y</h4>
+                                    <p class="text-[10px] font-mono text-neo-green uppercase tracking-widest">Midnight
+                                        Coder</p>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <div id="total-contributions"
+                                    class="text-2xl font-black text-neo-green tracking-tighter">--</div>
+                                <p class="text-[8px] font-mono text-gray-500 uppercase">Commits</p>
+                            </div>
+                        </div>
+
+                        <!-- GitHub Badges Container -->
+                        <div
+                            class="mb-8 border-2 border-white/20 p-4 bg-neo-black/60 relative group shadow-[4px_4px_0_rgba(51,255,87,0.1)] hover:border-neo-green transition-colors duration-500 h-auto md:h-[160px] flex flex-col">
+                            <div
+                                class="text-[9px] font-mono text-neo-green uppercase tracking-widest opacity-70 mb-3 flex items-center justify-between">
+                                <span>Trophy_Room</span>
+                                <span id="gh-badges-status" class="animate-pulse text-neo-yellow">Fetching...</span>
+                            </div>
+
+                            <div class="flex flex-col md:flex-row gap-4 flex-1">
+                                <!-- Active/Locked Badge -->
+                                <div
+                                    class="w-full md:w-1/3 flex flex-col items-center justify-center border-b-2 md:border-b-0 md:border-r-2 border-dashed border-white/10 pb-4 md:pb-0 md:pr-4">
+                                    <div class="text-[8px] font-mono text-gray-400 uppercase mb-2">Highest Rank</div>
+                                    <div id="gh-active-badge"
+                                        class="flex flex-col items-center justify-center w-full h-full min-h-[60px]">
+                                        <!-- Skeleton -->
+                                        <div
+                                            class="w-10 h-10 rounded-full border-2 border-white/20 border-t-neo-green animate-spin mb-2">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- History Awards Scroll Area -->
+                                <div class="w-full md:w-2/3 flex flex-col relative overflow-hidden">
+                                    <div class="text-[8px] font-mono text-gray-400 uppercase mb-2">Achievements</div>
+                                    <div
+                                        class="relative w-full flex-1 overflow-hidden marquee-container group/scroller border-l border-r border-white/5">
+                                        <!-- Gradient Masks for Marquee -->
+                                        <div
+                                            class="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-neo-black/90 to-transparent z-10 pointer-events-none">
+                                        </div>
+                                        <div
+                                            class="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-neo-black/90 to-transparent z-10 pointer-events-none">
+                                        </div>
+
+                                        <div id="gh-history-badges"
+                                            class="flex gap-4 pb-2 items-center h-full absolute px-4">
+                                            <!-- Skeletons -->
+                                            <div
+                                                class="min-w-[70px] flex flex-col items-center animate-pulse opacity-50">
+                                                <div class="w-10 h-10 bg-white/10 rounded-full mb-2"></div>
+                                                <div class="w-8 h-2 bg-white/10 rounded"></div>
+                                            </div>
+                                            <div
+                                                class="min-w-[70px] flex flex-col items-center animate-pulse opacity-50">
+                                                <div class="w-10 h-10 bg-white/10 rounded-full mb-2"></div>
+                                                <div class="w-8 h-2 bg-white/10 rounded"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Simplified Stats Grid (2x2) -->
+                        <div class="grid grid-cols-2 gap-4 mb-8 uppercase">
+                            <div
+                                class="border-2 border-neo-green/30 bg-neo-black/60 p-4 relative group overflow-hidden hover:border-neo-green transition-colors shadow-[4px_4px_0_rgba(51,255,87,0.1)]">
+                                <div
+                                    class="text-[9px] font-mono text-neo-green mb-1 uppercase tracking-widest opacity-70">
+                                    Repositories</div>
+                                <div id="repos-count" class="text-white font-black text-3xl tracking-tighter">--</div>
+                            </div>
+                            <div
+                                class="border-2 border-neo-green/30 bg-neo-black/60 p-4 relative group overflow-hidden hover:border-neo-green transition-colors shadow-[4px_4px_0_rgba(51,255,87,0.1)]">
+                                <div
+                                    class="text-[9px] font-mono text-neo-green mb-1 uppercase tracking-widest opacity-70">
+                                    Followers</div>
+                                <div id="followers-count" class="text-white font-black text-3xl tracking-tighter">--
+                                </div>
+                            </div>
+                            <div
+                                class="border-2 border-neo-green/30 bg-neo-black/60 p-4 relative group overflow-hidden hover:border-neo-green transition-colors shadow-[4px_4px_0_rgba(51,255,87,0.1)]">
+                                <div
+                                    class="text-[9px] font-mono text-neo-green mb-1 uppercase tracking-widest opacity-70">
+                                    Commits</div>
+                                <div id="total-contributions-grid"
+                                    class="text-white font-black text-3xl tracking-tighter">--</div>
+                            </div>
+                            <div
+                                class="border-2 border-neo-green/30 bg-neo-black/60 p-4 relative group overflow-hidden hover:border-neo-green transition-colors shadow-[4px_4px_0_rgba(51,255,87,0.1)]">
+                                <div
+                                    class="text-[9px] font-mono text-neo-green mb-1 uppercase tracking-widest opacity-70">
+                                    Joined</div>
+                                <div id="created-at"
+                                    class="text-white font-black text-xl tracking-tighter mt-1 leading-none">--</div>
+                            </div>
+                        </div>
+
+                        <!-- Activity Graph parallel to LeetCode Heatmap -->
+                        <div class="flex-1 flex flex-col justify-center mb-8">
+                            <div
+                                class="bg-black border-2 border-neo-green/30 p-2 overflow-hidden shadow-[4px_4px_0_rgba(51,255,87,0.1)] group hover:border-neo-green transition-colors duration-500 relative">
+                                <!-- NeoBrutalist accent dot -->
+                                <div class="absolute top-1 right-1 w-1.5 h-1.5 bg-neo-green rounded-full animate-pulse">
+                                </div>
+                                <p class="text-[8px] font-mono text-neo-green/50 uppercase tracking-[0.2em] mb-1">
+                                    Matrix_Output</p>
+                                <img src="https://ghchart.rshah.org/33FF57/ravindra-y" alt="GitHub Contribution Graph"
+                                    class="w-full h-auto filter brightness-110" style="image-rendering: auto;" />
+                            </div>
+                        </div>
+
+                        <!-- Command Line Footer -->
+                        <div
+                            class="mt-auto flex items-center justify-between text-neo-green p-3 border-2 border-white/10 bg-neo-black font-mono text-[11px]">
+                            <div class="flex items-center gap-2">
+                                <span class="text-white/30">$</span>
+                                <span class="text-neo-green">gh --stats</span>
+                                <span class="animate-pulse">_</span>
+                            </div>
+                            <a href="https://github.com/ravindra-y" target="_blank"
+                                class="text-neo-green px-3 py-1 font-black uppercase border border-neo-green hover:bg-neo-green hover:text-black transition-all">
+                                VIEW_GH →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LeetCode Column -->
+                <div class="reveal flex flex-col h-full">
+                    <div class="flex items-center gap-2 mb-4 border-b border-white/20 pb-2">
+                        <div class="w-8 h-8 bg-neo-orange border-2 border-white flex items-center justify-center">
+                            <i class="ri-code-box-fill text-lg text-black"></i>
+                        </div>
+                        <h3 class="text-2xl font-black uppercase text-white">LEETCODE</h3>
+                    </div>
+
+                    <!-- LeetCode Block -->
+                    <div
+                        class="border-4 border-white/20 p-6 bg-black flex-1 flex flex-col shadow-[8px_8px_0_rgba(0,0,0,1)] relative group">
+                        <!-- Profile Header -->
+                        <div class="flex items-center justify-between mb-8 pb-4 border-b border-white/10">
+                            <div class="flex items-center gap-3">
+                                <i class="ri-code-box-fill text-3xl text-neo-orange"></i>
+                                <div>
+                                    <h4 class="text-xl font-black text-white leading-tight">ravindra-y</h4>
+                                    <p class="text-[10px] font-mono text-neo-orange uppercase tracking-widest">
+                                        Problem
+                                        solver</p>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-2xl font-black text-neo-orange tracking-tighter">#Top</div>
+                                <p class="text-[8px] font-mono text-gray-500 uppercase">Ranking</p>
+                            </div>
+                        </div>
+
+                        <!-- LeetCode Badges Container -->
+                        <div
+                            class="mb-8 border-2 border-white/20 p-4 bg-neo-black/60 relative group shadow-[4px_4px_0_rgba(255,107,0,0.1)] hover:border-neo-orange transition-colors duration-500 h-auto md:h-[160px] flex flex-col">
+                            <div
+                                class="text-[9px] font-mono text-neo-orange uppercase tracking-widest opacity-70 mb-3 flex items-center justify-between">
+                                <span>Performance_Badges</span>
+                                <span id="lc-badges-status" class="animate-pulse text-neo-yellow">Fetching...</span>
+                            </div>
+
+                            <div class="flex flex-col md:flex-row gap-4 flex-1">
+                                <!-- Active/Locked Badge -->
+                                <div
+                                    class="w-full md:w-1/3 flex flex-col items-center justify-center border-b-2 md:border-b-0 md:border-r-2 border-dashed border-white/10 pb-4 md:pb-0 md:pr-4">
+                                    <div class="text-[8px] font-mono text-gray-400 uppercase mb-2">Active Badge</div>
+                                    <div id="lc-active-badge"
+                                        class="flex flex-col items-center justify-center w-full h-full min-h-[60px]">
+                                        <!-- Skeleton -->
+                                        <div
+                                            class="w-10 h-10 rounded-full border-2 border-white/20 border-t-neo-orange animate-spin mb-2">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- History Awards Scroll Area -->
+                                <div class="w-full md:w-2/3 flex flex-col relative overflow-hidden">
+                                    <div class="text-[8px] font-mono text-gray-400 uppercase mb-2">History Awards</div>
+                                    <div
+                                        class="relative w-full flex-1 overflow-hidden marquee-container group/scroller border-l border-r border-white/5">
+                                        <!-- Gradient Masks for Marquee -->
+                                        <div
+                                            class="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-neo-black/90 to-transparent z-10 pointer-events-none">
+                                        </div>
+                                        <div
+                                            class="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-neo-black/90 to-transparent z-10 pointer-events-none">
+                                        </div>
+
+                                        <div id="lc-history-badges"
+                                            class="flex gap-2 pb-2 items-center h-full absolute px-2">
+                                            <!-- Skeletons -->
+                                            <div
+                                                class="min-w-[70px] flex flex-col items-center animate-pulse opacity-50">
+                                                <div class="w-10 h-10 bg-white/10 rounded-full mb-2"></div>
+                                                <div class="w-8 h-2 bg-white/10 rounded"></div>
+                                            </div>
+                                            <div
+                                                class="min-w-[70px] flex flex-col items-center animate-pulse opacity-50">
+                                                <div class="w-10 h-10 bg-white/10 rounded-full mb-2"></div>
+                                                <div class="w-8 h-2 bg-white/10 rounded"></div>
+                                            </div>
+                                            <div
+                                                class="min-w-[70px] flex flex-col items-center animate-pulse opacity-50">
+                                                <div class="w-10 h-10 bg-white/10 rounded-full mb-2"></div>
+                                                <div class="w-8 h-2 bg-white/10 rounded"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Activity Box parallel to GitHub Matrix -->
+                        <div class="flex-1 flex flex-col justify-center mb-8">
+                            <div
+                                class="border-2 border-neo-orange/30 p-2 overflow-hidden bg-black shadow-[4px_4px_0_rgba(255,107,0,0.1)] group hover:border-neo-orange transition-colors duration-500 relative">
+                                <!-- NeoBrutalist accent dot -->
+                                <div
+                                    class="absolute top-1 right-1 w-1.5 h-1.5 bg-neo-orange rounded-full animate-pulse">
+                                </div>
+                                <img src="https://leetcard.jacoblin.cool/ravindra-y?theme=dark&font=Ubuntu&ext=heatmap"
+                                    alt="LeetCode Stats" class="w-full h-auto object-contain filter contrast-125" />
+                            </div>
+                        </div>
+
+                        <!-- Command Line Footer -->
+                        <div
+                            class="mt-auto flex items-center justify-between text-neo-orange p-3 border-2 border-white/10 bg-neo-black font-mono text-[11px]">
+                            <div class="flex items-center gap-2">
+                                <span class="text-white/30">$</span>
+                                <span class="text-neo-orange">leetcode --u</span>
+                                <span class="animate-pulse">_</span>
+                            </div>
+                            <a href="https://leetcode.com/u/ravindra-y/" target="_blank"
+                                class="text-neo-orange px-3 py-1 font-black uppercase border border-neo-orange hover:bg-neo-orange hover:text-black transition-all">
+                                VIEW_LC →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-24 bg-neo-yellow border-t-4 border-black px-4 overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-6xl md:text-9xl font-black mb-16 uppercase tracking-tighter text-white drop-shadow-[4px_4px_0_rgba(0,0,0,1)] text-stroke-black"
+                style="-webkit-text-stroke: 3px black;">
+                Selected Works
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <article class="reveal group bg-white border-4 border-black p-4 shadow-hard">
+                    <div
+                        class="bg-black border-2 border-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all">
+                        <img src="assets/images/night-sky.png"
+                            alt="PhisGaurd - AI-powered cybersecurity platform for threat detection by Ravindra"
+                            class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3
+                                class="text-4xl font-black uppercase mb-2 group-hover:text-neo-red transition-colors glitch-hover">
+                                NightSky CG</h3>
+                            <p class="font-mono text-sm mb-4 max-w-xs">NIGHTSKY CG is a modern, dark-mode optimized web application designed for astronomy enthusiasts to discover and track the best stargazing locations across Chhattisgarh. Featuring a dynamic, animated starfield UI and an interactive district-wise map, the platform analyzes crucial visibility metrics including cloud cover, light pollution index (Bortle/SQM), and humidity to recommend optimal observation windows. Beautifully visualized data meets immersive design.</p>
+                            <div class="flex gap-2 font-mono text-xs font-bold flex-wrap">
+                                <span class="bg-neo-black text-white px-2 py-1">AI/ML</span>
+                                <span class="bg-neo-black text-white px-2 py-1">Python</span>
+                                <span class="bg-neo-black text-white px-2 py-1">Browser-Extension</span>
+                                <span class="bg-neo-black text-white px-2 py-1">Frontend</span>
+                            </div>
+                        </div>
+                        <a href="https://github.com/ravindra-y/VisionFlow.git" target="_blank" rel="noopener noreferrer"
+                            class="w-12 h-12 border-2 border-black bg-neo-green flex items-center justify-center hover:bg-black hover:text-white transition-all cursor-hover shadow-hard-sm">
+                            <i class="ri-arrow-right-up-line text-2xl"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="reveal group bg-white border-4 border-black p-4 shadow-hard mt-0 md:mt-20">
+                    <div
+                        class="bg-black border-2 border-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all">
+                        <img src="assets/images/daily-time-tracker.png"
+                            alt="Daily Time Tracker - Productivity tool for tracking daily activities by Ravindra"
+                            class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3
+                                class="text-4xl font-black uppercase mb-2 group-hover:text-neo-blue transition-colors glitch-hover">
+                                Daily Time Tracker</h3>
+                            <p class="font-mono text-sm mb-4 max-w-xs">A lightweight, browser-based daily time tracker
+                                that helps you log tasks quickly and visualize where your time goes—so you can stay
+                                consistent, accountable, and more productive.</p>
+                            <div class="flex gap-2 font-mono text-xs font-bold flex-wrap">
+                                <span class="bg-neo-black text-white px-2 py-1">JavaScript</span>
+                                <span class="bg-neo-black text-white px-2 py-1">HTML</span>
+                                <span class="bg-neo-black text-white px-2 py-1">CSS</span>
+                            </div>
+                        </div>
+                        <a href="https://github.com/ravindra-y/daily-time-tracker" target="_blank"
+                            rel="noopener noreferrer"
+                            class="w-12 h-12 border-2 border-black bg-neo-green flex items-center justify-center hover:bg-black hover:text-white transition-all cursor-hover shadow-hard-sm">
+                            <i class="ri-arrow-right-up-line text-2xl"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="reveal group bg-white border-4 border-black p-4 shadow-hard">
+                    <div
+                        class="bg-black border-2 border-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all">
+                        <img src="assets/images/Dependency-Trust-Analyzer.png"
+                            alt="Dependency Trust Analyzer - AI-powered dependency risk CLI by Ravindra"
+                            class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3
+                                class="text-4xl font-black uppercase mb-2 group-hover:text-neo-pink transition-colors glitch-hover">
+                                Dependency Trust Analyzer</h3>
+                            <p class="font-mono text-sm mb-4 max-w-xs">AI-powered CLI that scores trust signals,
+                                scans licenses, and flags risky packages for safer JavaScript dependencies.</p>
+                            <div class="flex gap-2 font-mono text-xs font-bold flex-wrap">
+                                <span class="bg-neo-black text-white px-2 py-1">Node.js</span>
+                                <span class="bg-neo-black text-white px-2 py-1">JavaScript</span>
+                                <span class="bg-neo-black text-white px-2 py-1">CLI</span>
+                                <span class="bg-neo-black text-white px-2 py-1">License Scan</span>
+                            </div>
+                        </div>
+                        <a href="https://github.com/ravindra-y/Dependency-Trust-Analyzer" target="_blank"
+                            rel="noopener noreferrer"
+                            class="w-12 h-12 border-2 border-black bg-neo-green flex items-center justify-center hover:bg-black hover:text-white transition-all cursor-hover shadow-hard-sm">
+                            <i class="ri-arrow-right-up-line text-2xl"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="reveal group bg-white border-4 border-black p-4 shadow-hard mt-0 md:mt-20">
+                    <div
+                        class="bg-black border-2 border-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all">
+                        <img src="assets/images/Ai-Media-Player.png"
+                            alt="Ai Media Player - Material Design productivity app by Ravindra"
+                            class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3
+                                class="text-4xl font-black uppercase mb-2 group-hover:text-neo-orange transition-colors glitch-hover">
+                                AI MEDIA PLAYER</h3>
+                            <p class="font-mono text-sm mb-4 max-w-xs">Built a high-fidelity web player that makes
+                                discovery feel instant through AI search, animated visuals, and smooth playback
+                                interactions.</p>
+                            <div class="flex gap-2 font-mono text-xs font-bold flex-wrap">
+                                <span class="bg-neo-black text-white px-2 py-1">HTML</span>
+                                <span class="bg-neo-black text-white px-2 py-1">CSS</span>
+                                <span class="bg-neo-black text-white px-2 py-1">JavaScript</span>
+                                <span class="bg-neo-black text-white px-2 py-1">Tailwind CSS</span>
+                                <span class="bg-neo-black text-white px-2 py-1">Font Awesome</span>
+                            </div>
+                        </div>
+                        <a href="https://github.com/ravindra-y/Ai-Media-Player" target="_blank"
+                            rel="noopener noreferrer"
+                            class="w-12 h-12 border-2 border-black bg-neo-green flex items-center justify-center hover:bg-black hover:text-white transition-all cursor-hover shadow-hard-sm">
+                            <i class="ri-arrow-right-up-line text-2xl"></i>
+                        </a>
+                    </div>
+                </article>
+                <!-- End Projects -->
+            </div>
+
+            <div class="text-center mt-24">
+                <a href="https://github.com/ravindra-y?tab=repositories"
+                    class="inline-block bg-neo-black text-white px-12 py-5 font-bold font-mono text-xl hover:bg-neo-white hover:text-black border-4 border-black transition-all shadow-hard hover:shadow-none cursor-hover">
+                    VIEW ALL REPOS ON GITHUB
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="reports" class="py-24 bg-neo-black border-t-4 border-black overflow-hidden relative">
+        <div class="max-w-7xl mx-auto px-4">
+            <div
+                class="items-center gap-2 mb-16 bg-white/5 border-2 border-white/10 p-4 inline-flex shadow-hard shadow-neo-blue/20">
+                <div class="flex gap-2">
+                    <div class="h-3 w-3 bg-red-500 rounded-full border border-black"></div>
+                    <div class="h-3 w-3 bg-yellow-500 rounded-full border border-black"></div>
+                    <div class="h-3 w-3 bg-green-500 rounded-full border border-black"></div>
+                </div>
+                <h2 class="font-mono text-white text-xl font-bold ml-4 tracking-tighter">USER_REPORTS.txt</h2>
+                <div class="ml-8 px-2 bg-neo-blue text-black text-[10px] font-black uppercase">LIVE_FEED</div>
+            </div>
+        </div>
+
+        <div class="marquee-container group cursor-hover">
+            <div class="marquee-content flex gap-8 py-12 px-4 select-none">
+                <!-- Original Set -->
+                <div
+                    class="flex-shrink-0 w-[450px] bg-neo-black border-4 border-white/10 p-8 shadow-hard hover:border-neo-green/50 hover:-translate-y-2 transition-all duration-500 relative group/card overflow-hidden text-left whitespace-normal">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-neo-green"></div>
+                    <div class="absolute -top-4 -right-4 w-12 h-12 bg-white/5 rotate-45"></div>
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="font-mono text-neo-green text-xs font-bold tracking-widest uppercase">REPORT_001.log
+                        </div>
+                        <div class="text-[10px] font-mono text-gray-500">2025.txt</div>
+                    </div>
+                    <div class="font-mono text-gray-400 text-[10px] mb-2 uppercase tracking-tight">FROM: Student @ L J
+                        University</div>
+                    <p class="font-bold text-xl leading-snug mb-6 text-white/90">"Ravindra Proved no matter how pressure
+                        or
+                        less time is he makes projects complete outstandingly"</p>
+                    <div class="flex text-neo-green/60 gap-1 text-lg">
+                        <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+                            class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                    </div>
+                </div>
+
+                <div
+                    class="flex-shrink-0 w-[450px] bg-neo-black border-4 border-white/10 p-8 shadow-hard hover:border-neo-blue/50 hover:-translate-y-2 transition-all duration-500 relative group/card overflow-hidden text-left whitespace-normal">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-neo-blue"></div>
+                    <div class="absolute -top-4 -right-4 w-12 h-12 bg-white/5 rotate-45"></div>
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="font-mono text-neo-blue text-xs font-bold tracking-widest uppercase">REPORT_002.log
+                        </div>
+                        <div class="text-[10px] font-mono text-gray-500">2025.txt</div>
+                    </div>
+                    <div class="font-mono text-gray-400 text-[10px] mb-2 uppercase tracking-tight">FROM: CEO @ Alpha
+                        Consultancy</div>
+                    <p class="font-bold text-xl leading-snug mb-6 text-white/90">"Fast, reliable, and actually has good
+                        taste in design. A rare combination."</p>
+                    <div class="flex text-neo-blue/60 gap-1 text-lg">
+                        <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+                            class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                    </div>
+                </div>
+
+                <div
+                    class="flex-shrink-0 w-[450px] bg-neo-black border-4 border-white/10 p-8 shadow-hard hover:border-neo-pink/50 hover:-translate-y-2 transition-all duration-500 relative group/card overflow-hidden text-left whitespace-normal">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-neo-pink"></div>
+                    <div class="absolute -top-4 -right-4 w-12 h-12 bg-white/5 rotate-45"></div>
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="font-mono text-neo-pink text-xs font-bold tracking-widest uppercase">REPORT_003.log
+                        </div>
+                        <div class="text-[10px] font-mono text-gray-500">2025.txt</div>
+                    </div>
+                    <div class="font-mono text-gray-400 text-[10px] mb-2 uppercase tracking-tight">FROM: Student @ L J
+                        University</div>
+                    <p class="font-bold text-xl leading-snug mb-6 text-white/90">"Cleanest code I've seen in years. He
+                        knows how to handle complex state management."</p>
+                    <div class="flex text-neo-pink/60 gap-1 text-lg">
+                        <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+                            class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                    </div>
+                </div>
+
+                <div
+                    class="flex-shrink-0 w-[450px] bg-neo-black border-4 border-white/10 p-8 shadow-hard hover:border-neo-purple/50 hover:-translate-y-2 transition-all duration-500 relative group/card overflow-hidden text-left whitespace-normal">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-neo-purple"></div>
+                    <div class="absolute -top-4 -right-4 w-12 h-12 bg-white/5 rotate-45"></div>
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="font-mono text-neo-purple text-xs font-bold tracking-widest uppercase">
+                            REPORT_004.log</div>
+                        <div class="text-[10px] font-mono text-gray-500">2025.txt</div>
+                    </div>
+                    <div class="font-mono text-gray-400 text-[10px] mb-2 uppercase tracking-tight">FROM: Dev @
+                        CreativeChaos</div>
+                    <p class="font-bold text-xl leading-snug mb-6 text-white/90">"Creative designing idea and provided a
+                        Unique UI experience."</p>
+                    <div class="flex text-neo-purple/60 gap-1 text-lg">
+                        <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+                            class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                    </div>
+                </div>
+
+                <div
+                    class="flex-shrink-0 w-[450px] bg-neo-black border-4 border-white/10 p-8 shadow-hard hover:border-neo-orange/50 hover:-translate-y-2 transition-all duration-500 relative group/card overflow-hidden text-left whitespace-normal">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-neo-orange"></div>
+                    <div class="absolute -top-4 -right-4 w-12 h-12 bg-white/5 rotate-45"></div>
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="font-mono text-neo-orange text-xs font-bold tracking-widest uppercase">
+                            REPORT_005.log</div>
+                        <div class="text-[10px] font-mono text-gray-500">2025.txt</div>
+                    </div>
+                    <div class="font-mono text-gray-400 text-[10px] mb-2 uppercase tracking-tight">FROM: UX Designer @
+                        TechFlow</div>
+                    <p class="font-bold text-xl leading-snug mb-6 text-white/90">"Highly intuitive UX. Delivered exactly
+                        what we needed before we even knew we needed it."</p>
+                    <div class="flex text-neo-orange/60 gap-1 text-lg">
+                        <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+                            class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                    </div>
+                </div>
+
+                <!-- Duplicate Set for Loop -->
+                <div
+                    class="flex-shrink-0 w-[450px] bg-neo-black border-4 border-white/10 p-8 shadow-hard hover:border-neo-green/50 hover:-translate-y-2 transition-all duration-500 relative group/card overflow-hidden text-left whitespace-normal">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-neo-green"></div>
+                    <div class="absolute -top-4 -right-4 w-12 h-12 bg-white/5 rotate-45"></div>
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="font-mono text-neo-green text-xs font-bold tracking-widest uppercase">REPORT_001.log
+                        </div>
+                        <div class="text-[10px] font-mono text-gray-500">2025.txt</div>
+                    </div>
+                    <div class="font-mono text-gray-400 text-[10px] mb-2 uppercase tracking-tight">FROM: Student @ L J
+                        University</div>
+                    <p class="font-bold text-xl leading-snug mb-6 text-white/90">"Ravindra didn't just build a website,
+                        he
+                        built a war machine. Our conversions tripled in a week."</p>
+                    <div class="flex text-neo-green/60 gap-1 text-lg">
+                        <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+                            class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                    </div>
+                </div>
+
+                <div
+                    class="flex-shrink-0 w-[450px] bg-neo-black border-4 border-white/10 p-8 shadow-hard hover:border-neo-blue/50 hover:-translate-y-2 transition-all duration-500 relative group/card overflow-hidden text-left whitespace-normal">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-neo-blue"></div>
+                    <div class="absolute -top-4 -right-4 w-12 h-12 bg-white/5 rotate-45"></div>
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="font-mono text-neo-blue text-xs font-bold tracking-widest uppercase">REPORT_002.log
+                        </div>
+                        <div class="text-[10px] font-mono text-gray-500">2025.txt</div>
+                    </div>
+                    <div class="font-mono text-gray-400 text-[10px] mb-2 uppercase tracking-tight">FROM: CEO @ Alpha
+                        Consultancy</div>
+                    <p class="font-bold text-xl leading-snug mb-6 text-white/90">"Fast, reliable, and actually has good
+                        taste in design. A rare combination."</p>
+                    <div class="flex text-neo-blue/60 gap-1 text-lg">
+                        <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+                            class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                    </div>
+                </div>
+
+                <div
+                    class="flex-shrink-0 w-[450px] bg-neo-black border-4 border-white/10 p-8 shadow-hard hover:border-neo-pink/50 hover:-translate-y-2 transition-all duration-500 relative group/card overflow-hidden text-left whitespace-normal">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-neo-pink"></div>
+                    <div class="absolute -top-4 -right-4 w-12 h-12 bg-white/5 rotate-45"></div>
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="font-mono text-neo-pink text-xs font-bold tracking-widest uppercase">REPORT_003.log
+                        </div>
+                        <div class="text-[10px] font-mono text-gray-500">2025.txt</div>
+                    </div>
+                    <div class="font-mono text-gray-400 text-[10px] mb-2 uppercase tracking-tight">FROM: Student @ L J
+                        University</div>
+                    <p class="font-bold text-xl leading-snug mb-6 text-white/90">"Cleanest code I've seen in years. He
+                        knows how to handle complex state management."</p>
+                    <div class="flex text-neo-pink/60 gap-1 text-lg">
+                        <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+                            class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                    </div>
+                </div>
+
+                <div
+                    class="flex-shrink-0 w-[450px] bg-neo-black border-4 border-white/10 p-8 shadow-hard hover:border-neo-purple/50 hover:-translate-y-2 transition-all duration-500 relative group/card overflow-hidden text-left whitespace-normal">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-neo-purple"></div>
+                    <div class="absolute -top-4 -right-4 w-12 h-12 bg-white/5 rotate-45"></div>
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="font-mono text-neo-purple text-xs font-bold tracking-widest uppercase">
+                            REPORT_004.log</div>
+                        <div class="text-[10px] font-mono text-gray-500">2025.txt</div>
+                    </div>
+                    <div class="font-mono text-gray-400 text-[10px] mb-2 uppercase tracking-tight">FROM: Dev @
+                        CreativeChaos</div>
+                    <p class="font-bold text-xl leading-snug mb-6 text-white/90">"The attention to detail in the
+                        NeoBrutalist implementation is flawless. A master of his craft."</p>
+                    <div class="flex text-neo-purple/60 gap-1 text-lg">
+                        <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+                            class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                    </div>
+                </div>
+
+                <div
+                    class="flex-shrink-0 w-[450px] bg-neo-black border-4 border-white/10 p-8 shadow-hard hover:border-neo-orange/50 hover:-translate-y-2 transition-all duration-500 relative group/card overflow-hidden text-left whitespace-normal">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-neo-orange"></div>
+                    <div class="absolute -top-4 -right-4 w-12 h-12 bg-white/5 rotate-45"></div>
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="font-mono text-neo-orange text-xs font-bold tracking-widest uppercase">
+                            REPORT_005.log</div>
+                        <div class="text-[10px] font-mono text-gray-500">2025.txt</div>
+                    </div>
+                    <div class="font-mono text-gray-400 text-[10px] mb-2 uppercase tracking-tight">FROM: UX Designer @
+                        TechFlow</div>
+                    <p class="font-bold text-xl leading-snug mb-6 text-white/90">"Highly intuitive UX. Delivered exactly
+                        what we needed before we even knew we needed it."</p>
+                    <div class="flex text-neo-orange/60 gap-1 text-lg">
+                        <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+                            class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 px-4 max-w-5xl mx-auto">
+        <div class="bg-white border-4 border-black shadow-hard-xl p-8 md:p-12 relative mt-12 reveal ">
+            <div
+                class="absolute -top-10 -left-6 bg-neo-yellow border-4 border-black px-6 py-2 shadow-hard rotate-[-5deg]">
+                <span class="font-black text-2xl">START A PROJECT</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h2 class="text-6xl font-black uppercase mb-6 leading-[0.85]">Let's<br>Talk<br>Code.</h2>
+                    <p class="font-mono text-lg mb-8 text-gray-600">
+                        I am currently available for freelance work and open to full-time opportunities.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-12 h-12 bg-neo-black text-white flex items-center justify-center border-2 border-black">
+                                <i class="ri-mail-line text-xl"></i>
+                            </div>
+                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ravindray.dev@gmail.com"
+                                target="_blank" rel="noopener noreferrer"
+                                class="text-xl font-bold hover:bg-neo-blue cursor-hover break-all">ravindray.dev@gmail.com</a>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-12 h-12 bg-neo-black text-white flex items-center justify-center border-2 border-black">
+                                <i class="ri-map-pin-line text-xl"></i>
+                            </div>
+                            <span class="text-xl font-bold">Remote / Earth</span>
+                        </div>
+                    </div>
+                </div>
+
+                <form id="contact-form" class="bg-gray-50 p-6 border-2 border-black">
+                    <div id="contact-form-fields" class="contact-form-fields space-y-6">
+                        <input type="hidden" name="source" value="portfolio-contact-form">
+                        <input type="text" name="_honey" class="hidden" tabindex="-1" autocomplete="off">
+                        <div class="flex flex-col">
+                            <label class="font-mono font-bold mb-1 uppercase text-xs">Identity</label>
+                            <input type="text" name="name" required autocomplete="name" placeholder="NAME / COMPANY"
+                                class="bg-white border-2 border-black p-3 font-bold focus:outline-none focus:bg-neo-yellow focus:shadow-hard-sm transition-all cursor-hover">
+                        </div>
+                        <div class="flex flex-col">
+                            <label class="font-mono font-bold mb-1 uppercase text-xs">Coordinates</label>
+                            <input type="email" name="email" required autocomplete="email" placeholder="EMAIL ADDRESS"
+                                class="bg-white border-2 border-black p-3 font-bold focus:outline-none focus:bg-neo-yellow focus:shadow-hard-sm transition-all cursor-hover">
+                        </div>
+                        <div class="flex flex-col">
+                            <label class="font-mono font-bold mb-1 uppercase text-xs">Transmission</label>
+                            <textarea rows="4" name="message" required minlength="10" placeholder="PROJECT DETAILS..."
+                                class="bg-white border-2 border-black p-3 font-bold focus:outline-none focus:bg-neo-yellow focus:shadow-hard-sm transition-all resize-none cursor-hover"></textarea>
+                        </div>
+                        <button id="contact-submit-btn" type="submit"
+                            class="w-full bg-neo-blue text-white font-black text-xl py-4 border-2 border-black shadow-hard neo-button hover:bg-neo-black hover:translate-y-1 hover:shadow-none transition-all cursor-hover">
+                            <span id="contact-submit-label">TRANSMIT DATA</span>
+                        </button>
+                        <p id="contact-form-status" class="hidden font-mono text-xs uppercase tracking-wide"
+                            aria-live="polite"></p>
+                    </div>
+                    <div id="contact-form-success" class="contact-form-success" role="status" aria-live="polite"
+                        aria-hidden="true">
+                        <div class="transmission-success-card">
+                            <div class="transmission-scanline" aria-hidden="true"></div>
+                            <div class="transmission-icon" aria-hidden="true">
+                                <i class="ri-checkbox-circle-fill"></i>
+                                <span class="transmission-ring"></span>
+                                <span class="transmission-ring transmission-ring--delay"></span>
+                            </div>
+                            <h3 class="text-2xl font-black uppercase transmission-success-title">Transmission Received
+                            </h3>
+                            <p id="contact-success-message" class="font-mono text-sm transmission-success-text">
+                                System response initialized. I will reach out shortly.
+                            </p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black text-white py-16 px-4 border-t-8 border-neo-green font-mono relative overflow-hidden">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 relative z-10">
+            <div class="col-span-1 md:col-span-2">
+                <h2 class="text-4xl font-black mb-6">RAVINDRA.</h2>
+                <p class="text-gray-400 max-w-sm">
+                    Designing for the future with the raw aesthetics of the past. No cookies, no trackers, just code.
+                </p>
+            </div>
+
+            <div>
+                <h3 class="font-bold text-neo-green mb-4 border-b border-gray-700 pb-2">SITEMAP</h3>
+                <ul class="space-y-2 text-gray-400">
+                    <li><a href="#"
+                            class="hover:text-white hover:underline decoration-neo-pink decoration-2 cursor-hover">Home</a>
+                    </li>
+                    <li><a href="#projects"
+                            class="hover:text-white hover:underline decoration-neo-pink decoration-2 cursor-hover">Works</a>
+                    </li>
+                    <li><a href="#about"
+                            class="hover:text-white hover:underline decoration-neo-pink decoration-2 cursor-hover">About</a>
+                    </li>
+                    <li><a href="#contact"
+                            class="hover:text-white hover:underline decoration-neo-pink decoration-2 cursor-hover">Contact</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="font-bold text-neo-green mb-4 border-b border-gray-700 pb-2">SOCIALS</h3>
+                <div class="flex gap-4">
+                    <a href="https://leetcode.com/u/ravindra-y/"
+                        class="text-2xl hover:text-neo-blue transition-colors cursor-hover"><i
+                            class="ri-code-fill"></i></a>
+                    <a href="https://www.instagram.com/i.ravindray/"
+                        class="text-2xl hover:text-neo-pink transition-colors cursor-hover"><i
+                            class="ri-instagram-fill"></i></a>
+                    <a href="https://github.com/ravindra-y"
+                        class="text-2xl hover:text-neo-yellow transition-colors cursor-hover"><i
+                            class="ri-github-fill"></i></a>
+                    <a href="https://www.linkedin.com/in/ravindra-ya/"
+                        class="text-2xl hover:text-neo-purple transition-colors cursor-hover"><i
+                            class="ri-linkedin-fill"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-16 pt-8 border-t border-gray-800 text-gray-500 text-sm">
+            <p>© 2025 RAVINDRA.exe // SYSTEM_END</p>
+        </div>
+
+        <div
+            class="absolute bottom-0 left-0 w-full text-[20vw] font-black text-white opacity-[0.03] leading-none select-none pointer-events-none text-center">
+            BRUTAL
+        </div>
+    </footer>
+
+    <script>
+        // Custom Cursor Logic
+        const cursor = document.getElementById('cursor');
+        const hoverElements = document.querySelectorAll('.cursor-hover, a, button, input, textarea');
+
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+            cursor.style.transform = `translate(-50%, -50%)`;
+        });
+
+        // Add hover effect to cursor
+        hoverElements.forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                cursor.style.width = '60px';
+                cursor.style.height = '60px';
+                cursor.style.backgroundColor = '#FBFF48'; // Neo Yellow
+                cursor.style.mixBlendMode = 'normal';
+                cursor.style.border = '2px solid black';
+            });
+            el.addEventListener('mouseleave', () => {
+                cursor.style.width = '24px';
+                cursor.style.height = '24px';
+                cursor.style.backgroundColor = '#fff';
+                cursor.style.mixBlendMode = 'difference';
+                cursor.style.border = 'none';
+            });
+        });
+
+        // Contact Form: send to owned backend API route.
+        const CONTACT_FORM_ENDPOINT = '/api/contact';
+        const CONTACT_FORM_LOCAL_FALLBACK_ENDPOINT = 'http://localhost:3000/api/contact';
+        const contactForm = document.getElementById('contact-form');
+        const contactSubmitBtn = document.getElementById('contact-submit-btn');
+        const contactSubmitLabel = document.getElementById('contact-submit-label');
+        const contactFormStatus = document.getElementById('contact-form-status');
+        const contactFormFields = document.getElementById('contact-form-fields');
+        const contactFormSuccess = document.getElementById('contact-form-success');
+        const contactSuccessMessage = document.getElementById('contact-success-message');
+        let contactSuccessTimeoutId = null;
+
+        function getContactFormEndpoints() {
+            const endpoints = [];
+
+            try {
+                endpoints.push(new URL(CONTACT_FORM_ENDPOINT, window.location.origin).toString());
+            } catch (_error) {
+                endpoints.push(CONTACT_FORM_ENDPOINT);
+            }
+
+            const isFileProtocol = window.location.protocol === 'file:';
+            const isLocalhostHost = ['localhost', '127.0.0.1', '::1'].includes(window.location.hostname);
+            const isNotBackendPort = window.location.port !== '3000';
+
+            if ((isFileProtocol || isLocalhostHost) && isNotBackendPort) {
+                endpoints.push(CONTACT_FORM_LOCAL_FALLBACK_ENDPOINT);
+            }
+
+            return [...new Set(endpoints)];
+        }
+
+        async function postContactPayload(payload) {
+            const endpoints = getContactFormEndpoints();
+            let lastError = null;
+
+            for (let index = 0; index < endpoints.length; index += 1) {
+                const endpoint = endpoints[index];
+                const hasMoreEndpoints = index < endpoints.length - 1;
+
+                try {
+                    const response = await fetch(endpoint, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            Accept: 'application/json',
+                        },
+                        body: JSON.stringify(payload),
+                    });
+
+                    const result = await response.json().catch(() => ({}));
+                    if (response.ok && result?.ok) {
+                        return result;
+                    }
+
+                    const errorMessage = typeof result?.error === 'string' && result.error.trim().length > 0
+                        ? result.error
+                        : 'Unable to send message right now.';
+
+                    if (response.status === 404 && hasMoreEndpoints) {
+                        lastError = new Error(errorMessage);
+                        continue;
+                    }
+
+                    throw new Error(errorMessage);
+                } catch (error) {
+                    lastError = error;
+
+                    if (hasMoreEndpoints) {
+                        continue;
+                    }
+                }
+            }
+
+            throw lastError || new Error('Unable to send message right now.');
+        }
+
+        function setContactFormStatus(message, tone = 'neutral') {
+            if (!contactFormStatus) return;
+
+            contactFormStatus.textContent = message;
+            contactFormStatus.classList.remove('hidden', 'text-neo-green', 'text-neo-red', 'text-gray-600');
+
+            if (tone === 'success') {
+                contactFormStatus.classList.add('text-neo-green');
+                return;
+            }
+
+            if (tone === 'error') {
+                contactFormStatus.classList.add('text-neo-red');
+                return;
+            }
+
+            contactFormStatus.classList.add('text-gray-600');
+        }
+
+        function setContactFormView(isSuccess) {
+            if (!contactForm) return;
+
+            if (isSuccess) {
+                contactForm.classList.add('contact-form--success');
+
+                if (contactFormSuccess) {
+                    contactFormSuccess.setAttribute('aria-hidden', 'false');
+                    contactFormSuccess.style.opacity = '1';
+                    contactFormSuccess.style.pointerEvents = 'auto';
+                    contactFormSuccess.style.transform = 'scale(1)';
+                }
+
+                if (contactFormFields) {
+                    contactFormFields.setAttribute('aria-hidden', 'true');
+                    contactFormFields.style.opacity = '0';
+                    contactFormFields.style.pointerEvents = 'none';
+                    contactFormFields.style.transform = 'translateY(-8px) scale(0.98)';
+                }
+                return;
+            }
+
+            contactForm.classList.remove('contact-form--success');
+
+            if (contactFormSuccess) {
+                contactFormSuccess.setAttribute('aria-hidden', 'true');
+                contactFormSuccess.style.opacity = '0';
+                contactFormSuccess.style.pointerEvents = 'none';
+                contactFormSuccess.style.transform = 'scale(0.98)';
+            }
+
+            if (contactFormFields) {
+                contactFormFields.removeAttribute('aria-hidden');
+                contactFormFields.style.opacity = '1';
+                contactFormFields.style.pointerEvents = 'auto';
+                contactFormFields.style.transform = 'translateY(0) scale(1)';
+            }
+        }
+
+        function resetContactFormSuccess() {
+            setContactFormView(false);
+
+            if (contactSuccessTimeoutId) {
+                clearTimeout(contactSuccessTimeoutId);
+                contactSuccessTimeoutId = null;
+            }
+        }
+
+        function showContactFormSuccess(message) {
+            if (contactSuccessMessage && message) {
+                contactSuccessMessage.textContent = message;
+            }
+
+            setContactFormView(true);
+
+            if (contactSuccessTimeoutId) {
+                clearTimeout(contactSuccessTimeoutId);
+            }
+            contactSuccessTimeoutId = setTimeout(() => {
+                resetContactFormSuccess();
+            }, 5000);
+        }
+
+        if (contactForm) {
+            contactForm.addEventListener('submit', async (event) => {
+                event.preventDefault();
+
+                resetContactFormSuccess();
+
+                if (!contactForm.checkValidity()) {
+                    contactForm.reportValidity();
+                    return;
+                }
+
+                const formData = new FormData(contactForm);
+                const payload = {
+                    name: String(formData.get('name') || '').trim(),
+                    email: String(formData.get('email') || '').trim(),
+                    message: String(formData.get('message') || '').trim(),
+                    honey: String(formData.get('_honey') || '').trim(),
+                };
+
+                // Simple honeypot anti-spam field.
+                if (payload.honey.length > 0) {
+                    return;
+                }
+
+                if (contactSubmitBtn) {
+                    contactSubmitBtn.disabled = true;
+                    contactSubmitBtn.classList.add('opacity-70', 'cursor-not-allowed');
+                }
+
+                if (contactSubmitLabel) {
+                    contactSubmitLabel.textContent = 'TRANSMITTING...';
+                }
+
+                setContactFormStatus('Sending transmission...', 'neutral');
+
+                try {
+                    const result = await postContactPayload(payload);
+
+                    contactForm.reset();
+                    const successMessage = typeof result?.message === 'string' && result.message.trim().length > 0
+                        ? result.message
+                        : 'Transmission received. I will reach out shortly.';
+
+                    setContactFormStatus(successMessage, result?.stored ? 'neutral' : 'success');
+                    showContactFormSuccess(successMessage);
+                } catch (error) {
+                    console.error('Contact form submit error:', error);
+                    const isFileProtocol = window.location.protocol === 'file:';
+                    const isLocalhostHost = ['localhost', '127.0.0.1', '::1'].includes(window.location.hostname);
+                    const isLikelyLocalPreview = isFileProtocol || (isLocalhostHost && window.location.port !== '3000');
+                    const hasKnownErrorMessage = error instanceof Error && error.message && error.message.trim().length > 0;
+                    const rawErrorMessage = hasKnownErrorMessage ? error.message.trim() : '';
+                    const isGenericErrorMessage =
+                        rawErrorMessage.length === 0
+                        || /^unable to send message right now\.?$/i.test(rawErrorMessage)
+                        || /^failed to fetch\.?$/i.test(rawErrorMessage)
+                        || /^networkerror when attempting to fetch resource\.?$/i.test(rawErrorMessage);
+
+                    const errorMessage = (isLikelyLocalPreview && isGenericErrorMessage)
+                        ? 'Contact API unreachable. Start the Node server and open http://localhost:3000.'
+                        : hasKnownErrorMessage
+                            ? error.message
+                            : (isLikelyLocalPreview
+                                ? 'Contact API unreachable. Start the Node server and open http://localhost:3000.'
+                                : 'Delivery failed. Please retry or email me directly.');
+
+                    setContactFormStatus(errorMessage, 'error');
+                } finally {
+                    if (contactSubmitBtn) {
+                        contactSubmitBtn.disabled = false;
+                        contactSubmitBtn.classList.remove('opacity-70', 'cursor-not-allowed');
+                    }
+
+                    if (contactSubmitLabel) {
+                        contactSubmitLabel.textContent = 'TRANSMIT DATA';
+                    }
+                }
+            });
+        }
+
+        // GitHub API Integration
+        const GITHUB_USERNAME = 'ravindra-y';
+        const GH_PROFILE_CACHE_KEY = 'gh-profile-ravindra-y';
+        const badgeLoopState = {};
+        // Lower value = slower horizontal badge movement.
+        const BADGE_LOOP_SPEEDS = {
+            github: 0.05,
+            leetcode: 0.08,
+            leetcodeFallback: 0.08,
+        };
+        let ghProfileCache = null;
+
+        function saveGitHubCache(profile) {
+            try {
+                const payload = {
+                    savedAt: Date.now(),
+                    profile,
+                };
+                localStorage.setItem(GH_PROFILE_CACHE_KEY, JSON.stringify(payload));
+            } catch (e) {
+                console.warn('Could not save GitHub cache:', e);
+            }
+        }
+
+        function loadGitHubCache() {
+            try {
+                const raw = localStorage.getItem(GH_PROFILE_CACHE_KEY);
+                if (!raw) return null;
+                const parsed = JSON.parse(raw);
+                return parsed?.profile || null;
+            } catch (e) {
+                console.warn('Could not read GitHub cache:', e);
+                return null;
+            }
+        }
+
+        function applyGitHubStatsToUI(data, isFallback = false) {
+            document.getElementById('repos-count').textContent = data?.public_repos ?? '0';
+            document.getElementById('followers-count').textContent = data?.followers ?? '0';
+
+            if (data?.created_at) {
+                const date = new Date(data.created_at);
+                const formattedDate = date.toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'short'
+                });
+                document.getElementById('created-at').textContent = formattedDate;
+            } else {
+                document.getElementById('created-at').textContent = 'N/A';
+            }
+
+            const contribHeader = document.getElementById('total-contributions');
+            const contribGrid = document.getElementById('total-contributions-grid');
+            const contribValue = `${((data?.public_repos || 0) * 20) + ((data?.followers || 0) * 5)}+`;
+
+            if (contribHeader) contribHeader.textContent = isFallback ? `${contribValue}*` : contribValue;
+            if (contribGrid) contribGrid.textContent = contribValue;
+        }
+
+        function startBadgeLoop(containerId, speedPxPerMs = 0.04) {
+            const container = document.getElementById(containerId);
+            if (!container || !container.parentElement) return;
+
+            const viewport = container.parentElement;
+
+            if (badgeLoopState[containerId]?.rafId) {
+                cancelAnimationFrame(badgeLoopState[containerId].rafId);
+            }
+
+            const rawItems = Array.from(container.children).map((node) => node.outerHTML);
+            if (!rawItems.length) return;
+
+            // Build one group and expand until it is wider than the viewport.
+            let groupMarkup = rawItems.join('');
+            container.innerHTML = `<div class="badge-loop-group">${groupMarkup}</div>`;
+
+            let group = container.firstElementChild;
+            let guard = 0;
+            while (group && group.scrollWidth < viewport.clientWidth * 1.2 && guard < 8) {
+                groupMarkup += rawItems.join('');
+                group.innerHTML = groupMarkup;
+                guard += 1;
+            }
+
+            container.classList.add('badge-loop-track');
+            container.classList.remove('animate-marquee');
+            container.innerHTML = `
+                <div class="badge-loop-group">${groupMarkup}</div>
+                <div class="badge-loop-group" aria-hidden="true">${groupMarkup}</div>
+            `;
+
+            const firstGroup = container.firstElementChild;
+            if (!firstGroup) return;
+
+            const loopWidth = firstGroup.scrollWidth;
+            if (!loopWidth) return;
+
+            let offset = 0;
+            let lastTime = performance.now();
+            const isPaused = () => viewport.matches(':hover') || viewport.matches(':focus-within');
+
+            const animate = (now) => {
+                if (isPaused()) {
+                    lastTime = now;
+                    badgeLoopState[containerId].rafId = requestAnimationFrame(animate);
+                    return;
+                }
+
+                const dt = Math.min(now - lastTime, 64);
+                lastTime = now;
+
+                offset -= speedPxPerMs * dt;
+                if (Math.abs(offset) >= loopWidth) {
+                    offset = -(((-offset) % loopWidth + loopWidth) % loopWidth);
+                }
+
+                container.style.transform = `translateX(${offset}px)`;
+                badgeLoopState[containerId].rafId = requestAnimationFrame(animate);
+            };
+
+            badgeLoopState[containerId] = {
+                rafId: requestAnimationFrame(animate),
+            };
+        }
+
+        function getGitHubRank(profile) {
+            const followers = profile?.followers || 0;
+            const repos = profile?.public_repos || 0;
+
+            if (followers >= 20 || repos >= 50) {
+                return { title: 'Star Developer', iconClass: 'ri-star-smile-fill' };
+            }
+
+            if (repos >= 10) {
+                return { title: 'Open Sourcer', iconClass: 'ri-git-repository-fill' };
+            }
+
+            return { title: 'Contributor', iconClass: 'ri-medal-line' };
+        }
+
+        function getGitHubAwards(profile) {
+            const repos = profile?.public_repos || 0;
+            const followers = profile?.followers || 0;
+            const awards = [];
+
+            if (repos >= 10) awards.push({ name: '10+ Repos', icon: 'ri-folder-open-fill' });
+            if (repos >= 50) awards.push({ name: '50+ Repos', icon: 'ri-folder-add-fill' });
+            if (followers >= 10) awards.push({ name: 'Popular', icon: 'ri-user-heart-fill' });
+
+            if (!awards.length) {
+                awards.push({ name: 'Contributor', icon: 'ri-medal-line' });
+            }
+
+            return awards;
+        }
+
+        function renderGitHubBadges(profile) {
+            const activeContainer = document.getElementById('gh-active-badge');
+            const historyContainer = document.getElementById('gh-history-badges');
+
+            if (activeContainer) {
+                const rank = getGitHubRank(profile);
+                activeContainer.innerHTML = `
+                    <div class="relative w-12 h-12 mb-2 group-hover:scale-110 transition-transform">
+                        <div class="w-full h-full rounded-full border-2 border-neo-green flex items-center justify-center bg-neo-green/10">
+                            <i class="${rank.iconClass} text-neo-green text-2xl drop-shadow-[0_0_8px_rgba(51,255,87,0.5)]"></i>
+                        </div>
+                    </div>
+                    <span class="text-[10px] font-mono text-white text-center leading-tight max-w-[90px] truncate" title="${rank.title}">${rank.title}</span>
+                `;
+            }
+
+            if (historyContainer) {
+                const awards = getGitHubAwards(profile);
+                historyContainer.innerHTML = awards.map(badge => `
+                    <div class="min-w-[70px] flex flex-col items-center group/badge">
+                        <div class="w-10 h-10 mb-2 relative group-hover/badge:-translate-y-1 transition-transform flex items-center justify-center border-2 border-white/20 rounded-full bg-white/5 shadow-[2px_2px_0_rgba(51,255,87,0.3)] hover:border-neo-green hover:shadow-[4px_4px_0_rgba(51,255,87,1)] cursor-pointer">
+                            <i class="${badge.icon} text-neo-green text-xl drop-shadow-[2px_2px_0_rgba(0,0,0,1)]"></i>
+                        </div>
+                        <span class="text-[9px] font-mono text-gray-300 font-bold text-center w-full truncate px-1" title="${badge.name}">${badge.name}</span>
+                    </div>
+                `).join('');
+
+                startBadgeLoop('gh-history-badges', BADGE_LOOP_SPEEDS.github);
+            }
+        }
+
+        async function fetchGitHubStats() {
+            try {
+                const response = await fetch(`https://api.github.com/users/${GITHUB_USERNAME}`, {
+                    headers: {
+                        'Accept': 'application/vnd.github.v3+json'
+                    }
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const data = await response.json();
+                ghProfileCache = data;
+                saveGitHubCache(data);
+                applyGitHubStatsToUI(data, false);
+
+            } catch (error) {
+                console.error('Error fetching GitHub stats:', error);
+                const cached = ghProfileCache || loadGitHubCache();
+                if (cached) {
+                    ghProfileCache = cached;
+                    applyGitHubStatsToUI(cached, true);
+                } else {
+                    applyGitHubStatsToUI({ public_repos: 0, followers: 0, created_at: null }, true);
+                    const contribElement = document.getElementById('total-contributions');
+                    if (contribElement) contribElement.textContent = 'Offline';
+                }
+            }
+        }
+
+        // Fetch GitHub Badges dynamically
+        async function fetchGitHubBadges() {
+            try {
+                let data = ghProfileCache;
+                if (!data) {
+                    const response = await fetch(`https://api.github.com/users/${GITHUB_USERNAME}`);
+                    if (!response.ok) throw new Error('GH API Error');
+                    data = await response.json();
+                    ghProfileCache = data;
+                    saveGitHubCache(data);
+                }
+
+                const statusEl = document.getElementById('gh-badges-status');
+                const activeContainer = document.getElementById('gh-active-badge');
+                const historyContainer = document.getElementById('gh-history-badges');
+
+                if (statusEl) {
+                    statusEl.textContent = 'Loaded';
+                    statusEl.classList.remove('animate-pulse', 'text-neo-yellow');
+                    statusEl.classList.add('text-neo-green');
+                }
+
+                if (activeContainer || historyContainer) {
+                    renderGitHubBadges(data);
+                }
+            } catch (error) {
+                console.error('Error fetching GH badges:', error);
+                const statusEl = document.getElementById('gh-badges-status');
+                const cached = ghProfileCache || loadGitHubCache();
+
+                if (cached) {
+                    ghProfileCache = cached;
+                    if (statusEl) {
+                        statusEl.textContent = 'Cached';
+                        statusEl.className = 'text-neo-yellow text-[9px] font-mono uppercase tracking-widest';
+                    }
+
+                    const activeContainer = document.getElementById('gh-active-badge');
+                    const historyContainer = document.getElementById('gh-history-badges');
+
+                    if (activeContainer || historyContainer) {
+                        renderGitHubBadges(cached);
+                    }
+                } else if (statusEl) {
+                    statusEl.textContent = 'Offline';
+                    statusEl.className = 'text-neo-yellow text-[9px] font-mono uppercase tracking-widest';
+                }
+            }
+        }
+
+        // Call on page load
+        async function initGitHubSection() {
+            await fetchGitHubStats();
+            await fetchGitHubBadges();
+        }
+
+        initGitHubSection();
+
+        const LEETCODE_USERNAME = 'ravindra-y';
+        const LC_BADGES_CACHE_KEY = 'lc-badges-ravindra-y';
+        const LC_BADGES_SIGNATURE_KEY = 'lc-badges-signature-ravindra-y';
+        const LC_STATS_CACHE_KEY = 'lc-stats-ravindra-y';
+        const LC_BADGES_API_URL = `https://alfa-leetcode-api.onrender.com/${LEETCODE_USERNAME}/badges`;
+        const LC_STATS_API_URL = `https://leetcode-api-faisalshohag.vercel.app/${LEETCODE_USERNAME}`;
+        const LC_BADGES_REFRESH_INTERVAL_MS = 10 * 60 * 1000;
+        const LC_BADGES_FOCUS_REFRESH_THRESHOLD_MS = 2 * 60 * 1000;
+        const LC_BADGES_RATE_LIMIT_COOLDOWN_MS = 5 * 60 * 1000;
+        let lcLastFetchAt = 0;
+        let lcLastRenderedSignature = '';
+        let lcRefreshTimerId = null;
+        let lcBadgesRateLimitedUntil = 0;
+        const LC_GENERIC_FALLBACK_BADGES = [
+            { name: 'Daily Streak', icon: 'ri-fire-fill', color: 'text-neo-orange' },
+            { name: 'Consistency', icon: 'ri-shield-star-fill', color: 'text-neo-blue' },
+            { name: 'Problem Solver', icon: 'ri-medal-fill', color: 'text-gray-300' },
+        ];
+
+        function setLeetCodeBadgeStatus(text, tone = 'online') {
+            const statusEl = document.getElementById('lc-badges-status');
+            if (!statusEl) return;
+
+            statusEl.textContent = text;
+            statusEl.className = 'text-[9px] font-mono uppercase tracking-widest';
+
+            if (tone === 'loading') {
+                statusEl.classList.add('text-neo-yellow', 'animate-pulse');
+                return;
+            }
+
+            if (tone === 'updated') {
+                statusEl.classList.add('text-neo-yellow');
+                return;
+            }
+
+            if (tone === 'offline') {
+                statusEl.classList.add('text-neo-orange');
+                return;
+            }
+
+            statusEl.classList.add('text-neo-green');
+        }
+
+        function normalizeLeetCodeBadges(payload) {
+            const sourceBadges = Array.isArray(payload?.badges) ? payload.badges : [];
+            const seen = new Set();
+            const getBadgeTime = (badge) => {
+                const parsed = new Date(badge?.creationDate || '').getTime();
+                return Number.isFinite(parsed) && parsed > 0 ? parsed : 0;
+            };
+
+            const badges = sourceBadges
+                .filter((badge) => badge && (badge.displayName || badge.icon))
+                .filter((badge) => {
+                    const key = [badge.id || '', badge.displayName || '', badge.icon || ''].join('|');
+                    if (seen.has(key)) return false;
+                    seen.add(key);
+                    return true;
+                })
+                .sort((a, b) => {
+                    const aTime = getBadgeTime(a);
+                    const bTime = getBadgeTime(b);
+                    return bTime - aTime;
+                });
+
+            const activeCandidate = payload?.activeBadge && (payload.activeBadge.displayName || payload.activeBadge.icon)
+                ? payload.activeBadge
+                : null;
+            const newestHistoryBadge = badges[0] || null;
+
+            let activeBadge = newestHistoryBadge || activeCandidate || null;
+            if (activeCandidate && (!newestHistoryBadge || getBadgeTime(activeCandidate) >= getBadgeTime(newestHistoryBadge))) {
+                activeBadge = activeCandidate;
+            }
+
+            return {
+                activeBadge,
+                badges,
+            };
+        }
+
+        function buildLeetCodeBadgeSignature(payload) {
+            const normalized = normalizeLeetCodeBadges(payload);
+            const activeKey = normalized.activeBadge
+                ? [
+                    normalized.activeBadge.id || '',
+                    normalized.activeBadge.displayName || '',
+                    normalized.activeBadge.icon || '',
+                    normalized.activeBadge.creationDate || '',
+                ].join('|')
+                : 'none';
+
+            const historyKey = normalized.badges
+                .map((badge) => [
+                    badge.id || '',
+                    badge.displayName || '',
+                    badge.icon || '',
+                    badge.creationDate || '',
+                ].join('|'))
+                .join('::');
+
+            return `${activeKey}##${historyKey}`;
+        }
+
+        function saveLeetCodeBadgeSignature(signature) {
+            try {
+                localStorage.setItem(LC_BADGES_SIGNATURE_KEY, signature || '');
+            } catch (e) {
+                console.warn('Could not save LeetCode signature:', e);
+            }
+        }
+
+        function loadLeetCodeBadgeSignature() {
+            try {
+                return localStorage.getItem(LC_BADGES_SIGNATURE_KEY) || '';
+            } catch (e) {
+                console.warn('Could not read LeetCode signature:', e);
+                return '';
+            }
+        }
+
+        function saveLeetCodeBadgeCache(payload) {
+            try {
+                const normalized = normalizeLeetCodeBadges(payload);
+                localStorage.setItem(LC_BADGES_CACHE_KEY, JSON.stringify({
+                    savedAt: Date.now(),
+                    payload: normalized,
+                }));
+            } catch (e) {
+                console.warn('Could not save LeetCode cache:', e);
+            }
+        }
+
+        function loadLeetCodeBadgeCache() {
+            try {
+                const raw = localStorage.getItem(LC_BADGES_CACHE_KEY);
+                if (!raw) return null;
+                const parsed = JSON.parse(raw);
+                return parsed?.payload || null;
+            } catch (e) {
+                console.warn('Could not read LeetCode cache:', e);
+                return null;
+            }
+        }
+
+        function normalizeLeetCodeStats(payload) {
+            if (!payload || typeof payload !== 'object') return null;
+
+            const toInt = (value) => {
+                const parsed = Number(value);
+                return Number.isFinite(parsed) && parsed >= 0 ? Math.floor(parsed) : 0;
+            };
+
+            const normalized = {
+                totalSolved: toInt(payload.totalSolved),
+                easySolved: toInt(payload.easySolved),
+                mediumSolved: toInt(payload.mediumSolved),
+                hardSolved: toInt(payload.hardSolved),
+                ranking: toInt(payload.ranking),
+                contributionPoint: toInt(payload.contributionPoint),
+            };
+
+            if (!normalized.totalSolved && !normalized.easySolved && !normalized.mediumSolved && !normalized.hardSolved) {
+                return null;
+            }
+
+            return normalized;
+        }
+
+        function saveLeetCodeStatsCache(payload) {
+            try {
+                const normalized = normalizeLeetCodeStats(payload);
+                if (!normalized) return;
+
+                localStorage.setItem(LC_STATS_CACHE_KEY, JSON.stringify({
+                    savedAt: Date.now(),
+                    payload: normalized,
+                }));
+            } catch (e) {
+                console.warn('Could not save LeetCode stats cache:', e);
+            }
+        }
+
+        function loadLeetCodeStatsCache() {
+            try {
+                const raw = localStorage.getItem(LC_STATS_CACHE_KEY);
+                if (!raw) return null;
+                const parsed = JSON.parse(raw);
+                return normalizeLeetCodeStats(parsed?.payload || null);
+            } catch (e) {
+                console.warn('Could not read LeetCode stats cache:', e);
+                return null;
+            }
+        }
+
+        function getLeetCodeStatsActiveBadge(stats) {
+            if (!stats) {
+                return { title: 'Badge data unavailable', icon: 'ri-fire-fill', color: 'text-neo-orange' };
+            }
+
+            if (stats.totalSolved >= 500) {
+                return { title: 'Elite Solver', icon: 'ri-trophy-fill', color: 'text-neo-yellow' };
+            }
+
+            if (stats.totalSolved >= 250) {
+                return { title: 'Advanced Solver', icon: 'ri-medal-fill', color: 'text-neo-orange' };
+            }
+
+            if (stats.totalSolved >= 100) {
+                return { title: 'Century Solver', icon: 'ri-fire-fill', color: 'text-neo-orange' };
+            }
+
+            if (stats.totalSolved >= 50) {
+                return { title: 'Steady Progress', icon: 'ri-shield-star-fill', color: 'text-neo-blue' };
+            }
+
+            return { title: 'Getting Started', icon: 'ri-rocket-fill', color: 'text-gray-300' };
+        }
+
+        function buildLeetCodeStatsHistory(stats) {
+            if (!stats) return [];
+
+            const badges = [
+                { name: `${stats.totalSolved} Solved`, icon: 'ri-fire-fill', color: 'text-neo-orange' },
+                { name: `${stats.mediumSolved} Medium`, icon: 'ri-shield-star-fill', color: 'text-neo-blue' },
+                { name: `${stats.hardSolved} Hard`, icon: 'ri-trophy-fill', color: 'text-gray-300' },
+            ];
+
+            if (stats.ranking > 0) {
+                badges.push({
+                    name: `Rank #${stats.ranking.toLocaleString('en-US')}`,
+                    icon: 'ri-medal-fill',
+                    color: 'text-neo-yellow',
+                });
+            }
+
+            return badges;
+        }
+
+        function renderLeetCodeStatsBadges(stats) {
+            const activeContainer = document.getElementById('lc-active-badge');
+            const historyContainer = document.getElementById('lc-history-badges');
+            const activeBadge = getLeetCodeStatsActiveBadge(stats);
+
+            if (activeContainer) {
+                activeContainer.innerHTML = `
+                    <div class="relative w-12 h-12 mb-2 group-hover:scale-110 transition-transform">
+                        <div class="w-full h-full rounded-full border-2 border-neo-orange flex items-center justify-center bg-neo-orange/10">
+                            <i class="${activeBadge.icon} ${activeBadge.color} text-2xl drop-shadow-[0_0_8px_rgba(255,159,28,0.5)]"></i>
+                        </div>
+                    </div>
+                    <span class="text-[10px] font-mono text-white text-center leading-tight max-w-[140px] px-1" title="${activeBadge.title}">${activeBadge.title}</span>
+                `;
+            }
+
+            if (historyContainer) {
+                const historyBadges = buildLeetCodeStatsHistory(stats);
+                historyContainer.innerHTML = historyBadges.map((badge) => `
+                    <div class="min-w-[160px] flex flex-col items-center group/badge px-1">
+                        <div class="w-10 h-10 mb-2 relative group-hover/badge:-translate-y-1 transition-transform cursor-pointer border-2 border-white/20 hover:border-neo-orange hover:shadow-[4px_4px_0_rgba(255,159,28,1)] rounded-full bg-white/5 flex items-center justify-center">
+                            <i class="${badge.icon} ${badge.color} text-xl drop-shadow-[2px_2px_0_rgba(0,0,0,1)]"></i>
+                        </div>
+                        <span class="text-[11px] font-mono text-gray-300 font-bold text-center w-full whitespace-nowrap" title="${badge.name}">${badge.name}</span>
+                    </div>
+                `).join('');
+
+                startBadgeLoop('lc-history-badges', BADGE_LOOP_SPEEDS.leetcodeFallback);
+            }
+        }
+
+        function buildLeetCodeStatsSignature(stats) {
+            if (!stats) return '__lc-stats-none__';
+            return [
+                stats.totalSolved,
+                stats.easySolved,
+                stats.mediumSolved,
+                stats.hardSolved,
+                stats.ranking,
+                stats.contributionPoint,
+            ].join('|');
+        }
+
+        async function fetchLeetCodeStatsFallback() {
+            try {
+                const response = await fetch(LC_STATS_API_URL, {
+                    cache: 'no-store',
+                });
+
+                if (!response.ok) {
+                    throw new Error(`Stats API Error: ${response.status}`);
+                }
+
+                const stats = normalizeLeetCodeStats(await response.json());
+                if (!stats) {
+                    throw new Error('Stats API payload invalid');
+                }
+
+                saveLeetCodeStatsCache(stats);
+                return stats;
+            } catch (error) {
+                console.warn('LeetCode stats fallback failed, trying cached stats:', error);
+                return loadLeetCodeStatsCache();
+            }
+        }
+
+        async function renderLeetCodeBestEffortBadges(statusLabel = 'Fallback') {
+            const cachedBadges = loadLeetCodeBadgeCache();
+            if (cachedBadges) {
+                const cachedSignature = buildLeetCodeBadgeSignature(cachedBadges);
+                if (lcLastRenderedSignature !== cachedSignature) {
+                    renderLeetCodeBadges(cachedBadges);
+                    lcLastRenderedSignature = cachedSignature;
+                }
+                setLeetCodeBadgeStatus('Cached', 'offline');
+                return;
+            }
+
+            const stats = await fetchLeetCodeStatsFallback();
+            if (stats) {
+                const statsSignature = buildLeetCodeStatsSignature(stats);
+                if (lcLastRenderedSignature !== statsSignature) {
+                    renderLeetCodeStatsBadges(stats);
+                    lcLastRenderedSignature = statsSignature;
+                }
+                setLeetCodeBadgeStatus(statusLabel, 'offline');
+                return;
+            }
+
+            const fallbackSignature = '__lc-fallback__';
+            if (lcLastRenderedSignature !== fallbackSignature) {
+                renderLeetCodeFallbackBadges();
+                lcLastRenderedSignature = fallbackSignature;
+            }
+            setLeetCodeBadgeStatus('Fallback', 'offline');
+        }
+
+        function renderLeetCodeFallbackBadges() {
+            const activeContainer = document.getElementById('lc-active-badge');
+            const historyContainer = document.getElementById('lc-history-badges');
+
+            if (activeContainer) {
+                activeContainer.innerHTML = `
+                    <div class="relative w-12 h-12 mb-2 group-hover:scale-110 transition-transform">
+                        <div class="w-full h-full rounded-full border-2 border-neo-orange flex items-center justify-center bg-neo-orange/10">
+                            <i class="ri-fire-fill text-neo-orange text-2xl drop-shadow-[0_0_8px_rgba(255,159,28,0.5)]"></i>
+                        </div>
+                    </div>
+                    <span class="text-[10px] font-mono text-white text-center leading-tight max-w-[120px] px-1" title="Badge data unavailable">Badge data unavailable</span>
+                `;
+            }
+
+            if (historyContainer) {
+                historyContainer.innerHTML = LC_GENERIC_FALLBACK_BADGES.map((badge) => `
+                    <div class="min-w-[145px] flex flex-col items-center group/badge px-1">
+                        <div class="w-10 h-10 mb-2 relative group-hover/badge:-translate-y-1 transition-transform cursor-pointer border-2 border-white/20 hover:border-neo-orange hover:shadow-[4px_4px_0_rgba(255,159,28,1)] rounded-full bg-white/5 flex items-center justify-center">
+                            <i class="${badge.icon} ${badge.color} text-xl drop-shadow-[2px_2px_0_rgba(0,0,0,1)]"></i>
+                        </div>
+                        <span class="text-[11px] font-mono text-gray-300 font-bold text-center w-full whitespace-nowrap" title="${badge.name}">${badge.name}</span>
+                    </div>
+                `).join('');
+
+                startBadgeLoop('lc-history-badges', BADGE_LOOP_SPEEDS.leetcodeFallback);
+            }
+        }
+
+        function renderLeetCodeBadges(data) {
+            const activeContainer = document.getElementById('lc-active-badge');
+            const historyContainer = document.getElementById('lc-history-badges');
+            const normalized = normalizeLeetCodeBadges(data);
+
+            const activeBadge = normalized.activeBadge;
+            if (activeContainer) {
+                if (activeBadge && activeBadge.displayName && activeBadge.icon) {
+                    const iconUrl = activeBadge.icon.startsWith('http') ? activeBadge.icon : 'https://leetcode.com' + activeBadge.icon;
+                    activeContainer.innerHTML = `
+                        <div class="relative w-12 h-12 mb-2 group-hover:scale-110 transition-transform">
+                            <img src="${iconUrl}" alt="${activeBadge.displayName}" class="w-full h-full object-contain drop-shadow-[0_0_8px_rgba(255,159,28,0.5)]">
+                        </div>
+                        <span class="text-[11px] font-mono text-white text-center leading-tight max-w-[150px] px-1" title="${activeBadge.displayName}">${activeBadge.displayName}</span>
+                    `;
+                } else {
+                    activeContainer.innerHTML = `
+                        <i class="ri-lock-2-line text-2xl mb-1 text-gray-500"></i>
+                        <span class="text-[10px] font-mono text-gray-500">Locked</span>
+                    `;
+                }
+            }
+
+            const badges = normalized.badges;
+            if (historyContainer) {
+                if (badges.length > 0) {
+                    historyContainer.innerHTML = badges.map(badge => {
+                        const iconUrl = badge.icon.startsWith('http') ? badge.icon : 'https://leetcode.com' + badge.icon;
+                        return `
+                            <div class="min-w-[145px] flex flex-col items-center group/badge px-1">
+                                <div class="w-10 h-10 mb-2 relative group-hover/badge:-translate-y-1 transition-transform cursor-pointer border-2 border-transparent hover:border-neo-orange p-0.5 rounded shadow-[0_0_0_rgba(255,159,28,0)] hover:shadow-[2px_2px_0_rgba(255,159,28,1)]">
+                                    <img src="${iconUrl}" alt="${badge.displayName}" class="w-full h-full object-contain drop-shadow-[2px_2px_0_rgba(0,0,0,1)]">
+                                </div>
+                                <span class="text-[11px] font-mono text-gray-300 font-bold text-center w-full whitespace-nowrap" title="${badge.displayName}">${badge.displayName}</span>
+                                <span class="text-[8px] font-mono text-neo-orange mt-1">${badge.creationDate || ''}</span>
+                            </div>
+                        `;
+                    }).join('');
+
+                    startBadgeLoop('lc-history-badges', BADGE_LOOP_SPEEDS.leetcode);
+                } else {
+                    historyContainer.innerHTML = `
+                        <div class="text-[10px] font-mono text-gray-500 w-full text-center py-4">No history awards</div>
+                    `;
+                }
+            }
+        }
+
+        // Fetch LeetCode Badges
+        async function fetchLeetCodeBadges(options = {}) {
+            const { force = false, showLoading = true } = options;
+            const now = Date.now();
+
+            if (!force && lcLastFetchAt && now - lcLastFetchAt < 30 * 1000) {
+                return;
+            }
+
+            if (showLoading) {
+                setLeetCodeBadgeStatus('Syncing...', 'loading');
+            }
+
+            if (!force && lcBadgesRateLimitedUntil && now < lcBadgesRateLimitedUntil) {
+                await renderLeetCodeBestEffortBadges('Rate-Limited');
+                lcLastFetchAt = Date.now();
+                return;
+            }
+
+            try {
+                const response = await fetch(LC_BADGES_API_URL, {
+                    cache: 'no-store',
+                });
+                if (!response.ok) throw new Error(`API Error: ${response.status}`);
+                const data = normalizeLeetCodeBadges(await response.json());
+                const previousSignature = loadLeetCodeBadgeSignature();
+                const currentSignature = buildLeetCodeBadgeSignature(data);
+                const shouldRender = lcLastRenderedSignature !== currentSignature;
+
+                saveLeetCodeBadgeCache(data);
+                saveLeetCodeBadgeSignature(currentSignature);
+
+                if (shouldRender) {
+                    renderLeetCodeBadges(data);
+                    lcLastRenderedSignature = currentSignature;
+                }
+
+                if (previousSignature && previousSignature !== currentSignature) {
+                    setLeetCodeBadgeStatus('Updated', 'updated');
+                } else {
+                    setLeetCodeBadgeStatus('Synced', 'online');
+                }
+            } catch (error) {
+                console.error('Error fetching LeetCode badges:', error);
+                const isRateLimited = String(error?.message || '').includes('429');
+                if (isRateLimited) {
+                    lcBadgesRateLimitedUntil = Date.now() + LC_BADGES_RATE_LIMIT_COOLDOWN_MS;
+                }
+
+                await renderLeetCodeBestEffortBadges(isRateLimited ? 'Rate-Limited' : 'Fallback');
+            } finally {
+                lcLastFetchAt = Date.now();
+            }
+        }
+
+        async function initLeetCodeBadgeSync() {
+            await fetchLeetCodeBadges({ force: true });
+
+            if (lcRefreshTimerId) {
+                clearInterval(lcRefreshTimerId);
+            }
+
+            lcRefreshTimerId = setInterval(() => {
+                if (document.visibilityState === 'visible') {
+                    fetchLeetCodeBadges({ showLoading: false });
+                }
+            }, LC_BADGES_REFRESH_INTERVAL_MS);
+
+            document.addEventListener('visibilitychange', () => {
+                if (document.visibilityState !== 'visible') return;
+                const isStale = Date.now() - lcLastFetchAt > LC_BADGES_FOCUS_REFRESH_THRESHOLD_MS;
+                if (isStale) {
+                    fetchLeetCodeBadges({ showLoading: false });
+                }
+            });
+
+            window.addEventListener('online', () => {
+                fetchLeetCodeBadges({ force: true, showLoading: false });
+            });
+        }
+
+        initLeetCodeBadgeSync();
+
+        // Scroll Reveal Logic
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // Scroll Progress Bar
+        window.onscroll = function () {
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+        };
+    </script>
+</body>
+
+
+</html>
