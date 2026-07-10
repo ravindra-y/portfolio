@@ -20,9 +20,14 @@ app.use(express.urlencoded({ extended: false }));
 app.use((req, res, next) => {
   const origin = req.get("origin") || "";
   const isContactApiRequest = req.path === "/api/contact";
+  const isLocalPreviewOrigin =
+    origin === "null" || LOCAL_DEV_ORIGIN_REGEX.test(origin);
 
-  if (isContactApiRequest && LOCAL_DEV_ORIGIN_REGEX.test(origin)) {
-    res.setHeader("Access-Control-Allow-Origin", origin);
+  if (isContactApiRequest && isLocalPreviewOrigin) {
+    res.setHeader(
+      "Access-Control-Allow-Origin",
+      origin === "null" ? "*" : origin,
+    );
     res.setHeader("Vary", "Origin");
     res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
     res.setHeader("Access-Control-Allow-Headers", "Content-Type, Accept");
@@ -184,10 +189,9 @@ app.post("/api/contact", async (req, res) => {
 
     const transporter = getTransporter();
     console.log("Transporter created successfully");
-    
+
     const toAddress = process.env.MAIL_TO;
     const fromAddress = process.env.MAIL_FROM || process.env.SMTP_USER;
-
 
     const subject = `New portfolio inquiry from ${name}`;
     const plainText = [
@@ -251,7 +255,7 @@ app.get("*", (_req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`NeoBrutalist server running on http://localhost:${PORT}`);
+  console.log(`NeoBrutalist server running on port ${PORT}`);
 
   const missingVars = getMissingEnvVars();
   if (missingVars.length) {
