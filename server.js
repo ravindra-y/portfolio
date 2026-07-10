@@ -183,8 +183,11 @@ app.post("/api/contact", async (req, res) => {
     }
 
     const transporter = getTransporter();
+    console.log("Transporter created successfully");
+    
     const toAddress = process.env.MAIL_TO;
     const fromAddress = process.env.MAIL_FROM || process.env.SMTP_USER;
+
 
     const subject = `New portfolio inquiry from ${name}`;
     const plainText = [
