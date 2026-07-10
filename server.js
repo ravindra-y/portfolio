@@ -66,27 +66,19 @@ function getMissingEnvVars() {
 }
 
 function getSmtpTransportConfig() {
-  const configuredPort = Number(process.env.SMTP_PORT);
-  const port =
-    Number.isFinite(configuredPort) && configuredPort > 0
-      ? configuredPort
-      : 465;
+  const port = Number(process.env.SMTP_PORT) || 587;
 
-  const secureSetting = String(process.env.SMTP_SECURE || "")
-    .trim()
-    .toLowerCase();
   const secure =
-    secureSetting === "true" || (secureSetting !== "false" && port === 465);
-  const host = String(process.env.SMTP_HOST || "")
-    .trim()
-    .toLowerCase();
+    String(process.env.SMTP_SECURE || "")
+      .trim()
+      .toLowerCase() === "true";
 
-  if (host.includes("gmail") && port === 587 && secureSetting !== "true") {
-    return {
-      port: 465,
-      secure: true,
-    };
-  }
+  console.log("SMTP CONFIG:", {
+    host: process.env.SMTP_HOST,
+    port,
+    secure,
+    user: process.env.SMTP_USER,
+  });
 
   return { port, secure };
 }
