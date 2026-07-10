@@ -117,8 +117,8 @@ The contact form now posts to your own backend route: `POST /api/contact`.
 3. Fill SMTP values in `.env`:
 
 - `SMTP_HOST`
-- `SMTP_PORT`
-- `SMTP_SECURE`
+- `SMTP_PORT` - use `465` for implicit TLS on Render/Gmail
+- `SMTP_SECURE` - set to `true` when using port `465`
 - `SMTP_USER`
 - `SMTP_PASS`
 - `MAIL_TO`

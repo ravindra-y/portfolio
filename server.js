@@ -65,6 +65,32 @@ function getMissingEnvVars() {
   return required.filter((key) => isPlaceholderEnvValue(process.env[key]));
 }
 
+function getSmtpTransportConfig() {
+  const configuredPort = Number(process.env.SMTP_PORT);
+  const port =
+    Number.isFinite(configuredPort) && configuredPort > 0
+      ? configuredPort
+      : 465;
+
+  const secureSetting = String(process.env.SMTP_SECURE || "")
+    .trim()
+    .toLowerCase();
+  const secure =
+    secureSetting === "true" || (secureSetting !== "false" && port === 465);
+  const host = String(process.env.SMTP_HOST || "")
+    .trim()
+    .toLowerCase();
+
+  if (host.includes("gmail") && port === 587 && secureSetting !== "true") {
+    return {
+      port: 465,
+      secure: true,
+    };
+  }
+
+  return { port, secure };
+}
+
 function getTransporter() {
   if (cachedTransporter) return cachedTransporter;
 
@@ -73,10 +99,7 @@ function getTransporter() {
     throw new Error(`Missing env vars: ${missingVars.join(", ")}`);
   }
 
-  const port = Number(process.env.SMTP_PORT);
-  const secure =
-    String(process.env.SMTP_SECURE || "").toLowerCase() === "true" ||
-    port === 465;
+  const { port, secure } = getSmtpTransportConfig();
 
   cachedTransporter = nodemailer.createTransport({
     host: process.env.SMTP_HOST,
