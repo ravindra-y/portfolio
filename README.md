@@ -114,7 +114,13 @@ The contact form now posts to your own backend route: `POST /api/contact`.
 
 - `copy .env.example .env`
 
-3. Fill SMTP values in `.env`:
+3. For deployments on Render's free tier, use Resend's HTTPS email API (SMTP ports are blocked). Add:
+
+- `RESEND_API_KEY`
+- `MAIL_TO`
+- `MAIL_FROM` - a sender address on a domain verified in Resend
+
+4. Alternatively, on a paid host with SMTP access, fill the SMTP values:
 
 - `SMTP_HOST`
 - `SMTP_PORT` - use `465` for implicit TLS on Render/Gmail

@@ -70,6 +70,41 @@ function getMissingEnvVars() {
   return required.filter((key) => isPlaceholderEnvValue(process.env[key]));
 }
 
+function hasResendApiKey() {
+  return !isPlaceholderEnvValue(process.env.RESEND_API_KEY);
+}
+
+function getMissingResendEnvVars() {
+  return ["MAIL_TO", "MAIL_FROM"].filter((key) =>
+    isPlaceholderEnvValue(process.env[key]),
+  );
+}
+
+async function sendWithResend({ to, from, replyTo, subject, text, html }) {
+  const response = await fetch("https://api.resend.com/emails", {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      to: [to],
+      from,
+      reply_to: replyTo,
+      subject,
+      text,
+      html,
+    }),
+  });
+
+  const result = await response.json().catch(() => ({}));
+  if (!response.ok) {
+    throw new Error(result.message || `Resend API request failed (${response.status}).`);
+  }
+
+  return result;
+}
+
 function getSmtpTransportConfig() {
   const port = Number(process.env.SMTP_PORT) || 587;
 
@@ -175,8 +210,18 @@ app.post("/api/contact", async (req, res) => {
       });
     }
 
+    const useResend = hasResendApiKey();
     const missingVars = getMissingEnvVars();
-    if (missingVars.length) {
+    const missingResendVars = getMissingResendEnvVars();
+
+    if (useResend && missingResendVars.length) {
+      return res.status(500).json({
+        ok: false,
+        error: `Resend email settings are incomplete: ${missingResendVars.join(", ")}.`,
+      });
+    }
+
+    if (!useResend && missingVars.length) {
       await storeSubmissionLocally({ name, email, message, source }, req);
 
       return res.status(202).json({
@@ -186,9 +231,6 @@ app.post("/api/contact", async (req, res) => {
           "Transmission saved. Email relay is not configured yet, so check submissions/contact-submissions.jsonl.",
       });
     }
-
-    const transporter = getTransporter();
-    console.log("Transporter created successfully");
 
     const toAddress = process.env.MAIL_TO;
     const fromAddress = process.env.MAIL_FROM || process.env.SMTP_USER;
@@ -222,10 +264,16 @@ app.post("/api/contact", async (req, res) => {
     };
 
     try {
-      console.log("Sending mail...");
-
-      const info = await transporter.sendMail(mailOptions);
-      console.log("Mail sent:", info);
+      if (useResend) {
+        console.log("Sending mail with Resend...");
+        const info = await sendWithResend(mailOptions);
+        console.log("Mail sent with Resend:", info);
+      } else {
+        const transporter = getTransporter();
+        console.log("Sending mail with SMTP...");
+        const info = await transporter.sendMail(mailOptions);
+        console.log("Mail sent with SMTP:", info);
+      }
 
       return res
         .status(200)
@@ -258,9 +306,11 @@ app.post("/api/contact", async (req, res) => {
 });
 
 app.get("/health", (_req, res) => {
-  const missingVars = getMissingEnvVars();
+  const useResend = hasResendApiKey();
+  const missingVars = useResend ? getMissingResendEnvVars() : getMissingEnvVars();
   res.status(200).json({
     ok: missingVars.length === 0,
+    deliveryProvider: useResend ? "resend" : "smtp",
     missingEnv: missingVars,
   });
 });
