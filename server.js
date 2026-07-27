@@ -212,18 +212,33 @@ app.post("/api/contact", async (req, res) => {
             <p>${escapeHtml(message).replace(/\n/g, "<br>")}</p>
         `;
 
-    await transporter.sendMail({
+    const mailOptions = {
       to: toAddress,
       from: fromAddress,
       replyTo: email,
       subject,
       text: plainText,
       html: htmlBody,
-    });
+    };
 
-    return res
-      .status(200)
-      .json({ ok: true, message: "Message sent successfully." });
+    try {
+      console.log("Sending mail...");
+
+      const info = await transporter.sendMail(mailOptions);
+      console.log("Mail sent:", info);
+
+      return res
+        .status(200)
+        .json({ ok: true, message: "Message sent successfully." });
+    } catch (error) {
+      console.error("SEND MAIL ERROR:");
+      console.error(error);
+
+      return res.status(500).json({
+        ok: false,
+        error: error.message || "Unable to send your message right now.",
+      });
+    }
   } catch (error) {
     console.error("Contact API error:", error);
 
