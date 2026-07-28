@@ -241,7 +241,7 @@ app.post("/api/contact", async (req, res) => {
       dateStyle: "medium",
       timeStyle: "short",
     });
-    const subject = `⚡ NEW_TRANSMISSION // ${name}`;
+    const subject = `⚡ SOMEONE'S_KNOCKING ⟵ ${name}`;
     const plainText = [
       "● SYSTEM STATUS: NEW INQUIRY",
       "",
